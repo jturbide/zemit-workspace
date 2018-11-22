@@ -1,0 +1,40 @@
+/deep/ .mat-toolbar-row .mat-button-wrapper > * + * {
+  margin-left: 1rem;
+}
+
+.mat-toolbar {
+  background-color: white;
+  border-bottom: rgba(0, 0, 0, 0.12) solid 1px;
+}
+// .mat-toolbar-multiple-rows {
+//   min-height: 0;
+// }
+// .mat-toolbar-row {
+//   height: 3rem;
+// }
+.mat-toolbar-row .mat-divider-vertical {
+  height: 1.5rem;
+} 
+/deep/ .mat-toolbar-row .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+  line-height: 2rem;
+  font-size: 1rem;
+}
+/deep/ .mat-toolbar-row .mat-button-toggle-appearance-standard .material-icons {
+  font-size: 1rem;
+  height: 1rem;
+}
+
+.mat-button-icon {
+  padding-right: 0.5rem;
+}
+
+.mat-toolbar-row > span {
+  font-size: 1rem;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+.mat-toolbar-row > * + * {
+  margin-left: 1rem;
+}

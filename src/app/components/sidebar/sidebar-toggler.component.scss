@@ -1,0 +1,18 @@
+.sidenav-spacer {
+  flex: 1 1 auto;
+}
+.sidenav-icon {
+  min-width: 0;
+  padding: 0.5rem 0;
+}
+.sidenav-items {
+  border-left: rgba(0, 0, 0, 0.12) solid 1px;
+}
+.sidenav-items .mat-button-toggle-group {
+  border-radius: 0;
+  border: 0;
+}
+/deep/ .sidenav-item.vertical-rl .mat-button-toggle-label-content {
+  writing-mode: vertical-rl;
+  padding: 1rem 0;
+}

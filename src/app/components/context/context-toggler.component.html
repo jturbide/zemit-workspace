@@ -1,0 +1,24 @@
+<mat-menu #menuContext="matMenu">
+    <button mat-menu-item routerLink="/context/structure">
+        <mat-icon>layers</mat-icon>
+        <span>Structure</span>
+    </button>
+    <button mat-menu-item routerLink="/context/style">
+        <mat-icon>format_paint</mat-icon>
+        <span>Style</span>
+    </button>
+    <button mat-menu-item routerLink="/context/events">
+        <mat-icon>flash_on</mat-icon>
+        <span>Events</span>
+    </button>
+    <button mat-menu-item routerLink="/context/preview">
+        <mat-icon>visibility</mat-icon>
+        <span>Preview</span>
+    </button>
+</mat-menu>
+
+<button mat-raised-button matTooltip="Workspace context" [matMenuTriggerFor]="menuContext">
+    <mat-icon>menu</mat-icon>
+    <span>Select</span>
+    <mat-icon>expand_more</mat-icon>
+</button>

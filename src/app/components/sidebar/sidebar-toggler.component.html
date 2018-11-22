@@ -1,0 +1,22 @@
+<div fxLayout="column" fxFlex>
+    <mat-button-toggle-group vertical name="drawers" aria-label="Drawers">
+        <mat-button-toggle class="sidenav-item vertical-rl" (click)="openDrawer('workspaces')">
+            Workspaces
+        </mat-button-toggle>
+        <mat-button-toggle class="sidenav-item vertical-rl" (click)="openDrawer('widgets')">
+            Widgets
+        </mat-button-toggle>
+        <mat-button-toggle class="sidenav-item vertical-rl" (click)="openDrawer('medias')">
+            Medias
+        </mat-button-toggle>
+        <mat-button-toggle class="sidenav-item vertical-rl" (click)="openDrawer('debug')">
+            Debug
+        </mat-button-toggle>
+    </mat-button-toggle-group>
+    
+    <span class="sidenav-spacer"></span>
+    
+    <a href="https://www.zemit.com" target="_blank" class="sidenav-item sidenav-icon" type="button" mat-button>
+        <img style="max-width: 1.5rem" src="./assets/logo.png" />
+    </a>
+</div>

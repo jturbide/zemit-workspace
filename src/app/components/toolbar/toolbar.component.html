@@ -1,0 +1,71 @@
+<mat-menu #menuProfile="matMenu">
+    <button mat-menu-item routerLink="/account">
+        <mat-icon>person</mat-icon>
+        <span>My account</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Sign-out</span>
+    </button>
+</mat-menu>
+
+<mat-menu #menuSettings="matMenu">
+    <button mat-menu-item routerLink="/settings">
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+    </button>
+    <button mat-menu-item routerLink="/about">
+        <mat-icon>info</mat-icon>
+        <span>About Desk Engine</span>
+    </button>
+</mat-menu>
+
+<mat-toolbar fxFlex="none">
+    <mat-toolbar-row>
+        
+        <button mat-button matTooltip="Go back to home page" routerLink="/">
+            <mat-icon>home</mat-icon>
+        </button>
+        
+        <de-context-toggler></de-context-toggler>
+        
+        <mat-divider vertical></mat-divider>
+        
+        <button mat-button matTooltip="Undo change">
+            <mat-icon>undo</mat-icon>
+        </button>
+        
+        <button mat-button matTooltip="Redo change">
+            <mat-icon>redo</mat-icon>
+        </button>
+        
+        <!--<span>Desk Engine</span>-->
+        
+        <span class="toolbar-spacer"></span>
+        
+        <button color="primary" mat-raised-button matTooltip="Sign-In to Google">
+            <mat-icon>person_pin</mat-icon>
+            <span>Sign-in with Google</span>
+        </button>
+        
+        <button color="warn" mat-raised-button>
+            Facebook
+        </button>
+        
+        <!--<button mat-button matTooltip="My profile" [matMenuTriggerFor]="menuProfile">-->
+        <!--    <mat-icon>person</mat-icon>-->
+        <!--    <span>Danny</span>-->
+        <!--    <mat-icon>expand_more</mat-icon>-->
+        <!--</button>-->
+        
+        <mat-divider vertical></mat-divider>
+        
+        <button mat-button matTooltip="Documentation" routerLink="/docs">
+            <mat-icon>book</mat-icon>
+        </button>
+        
+        <button mat-button matTooltip="Settings" [matMenuTriggerFor]="menuSettings">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
