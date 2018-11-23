@@ -1,22 +1,45 @@
 <div fxLayout="column" fxFlexFill>
     
-    <we-toolbar></we-toolbar>
-    
+    <we-toolbar [menu]="menu"></we-toolbar>
+
     <div class="main-container" fxLayout="row" fxFlex>
         <mat-drawer-container autosize fxFlex>
             <mat-drawer-content fxLayout="column">
-                <!--<mat-progress-bar mode="query"></mat-progress-bar>-->
-                <main fxFlex>
-                    <router-outlet></router-outlet>
-                </main>
+                
+                <mat-drawer-container autosize fxFlex>
+                    <mat-drawer-content>
+                        <main fxFlex fxLayout="column">
+                            <router-outlet></router-outlet>
+                        </main>
+                    </mat-drawer-content>
+                    <mat-drawer #menu class="sidenav-content" mode="over" position="start">
+                        <mat-nav-list>
+                            
+                            <h3 mat-subheader>Pages</h3>
+                            
+                            <mat-list-item routerLink="/" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">
+                                <mat-icon mat-list-icon>home</mat-icon>
+                                <h3 mat-line>Home</h3>
+                            </mat-list-item>
+                            
+                            <mat-divider></mat-divider>
+                            
+                            <mat-list-item routerLink="/about" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">
+                                <mat-icon mat-list-icon>info</mat-icon>
+                                <h3 mat-line>About Workspace Engine</h3>
+                            </mat-list-item>
+                            
+                        </mat-nav-list>
+                    </mat-drawer>
+                </mat-drawer-container>
             </mat-drawer-content>
             <mat-drawer #drawer class="sidenav-content" mode="side" position="end">
-                <we-sidebar-content></we-sidebar-content>
+                <we-sidebar-content #sidebarContent [drawer]="drawer" [currentDrawer]="currentDrawer"></we-sidebar-content>
             </mat-drawer>
         </mat-drawer-container>
         
         <div class="sidenav-items">
-            <we-sidebar-toggler fxFlex [drawer]="drawer"></we-sidebar-toggler>
+            <we-sidebar-toggler fxFlex [drawer]="drawer" [sidebarContent]="sidebarContent" [currentDrawer]="currentDrawer"></we-sidebar-toggler>
         </div>
     </div>
 </div>

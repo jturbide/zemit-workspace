@@ -1,15 +1,16 @@
-import { Component, ComponentRef, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 import { AppSettings } from '@shared/settings';
 import { AppSettingsService } from '@shared/settings.service';
 
+import { SidebarComponent, SidebarContentComponent } from '@components/sidebar/sidebar-content.component';
 import { SidebarWorkspacesComponent } from '@components/sidebar/workspaces/sidebar-workspaces.component';
 import { SidebarWidgetsComponent } from '@components/sidebar/widgets/sidebar-widgets.component';
 import { SidebarMediasComponent } from '@components/sidebar/medias/sidebar-medias.component';
 
 interface Drawer {
-  sidebarToggler: string,
-  sidebarContent: any,
+  title: string,
+  content: SidebarComponent,
   isDisabled(): boolean,
   isVisible(): boolean
 }
@@ -22,7 +23,8 @@ interface Drawer {
 export class SidebarTogglerComponent implements OnInit {
 	
 	@Input() drawer: MatDrawer;
-	currentDrawer: string = null;
+	@Input() currentDrawer: SidebarComponent;
+	@Input() sidebarContent: SidebarContentComponent;
 	
 	private settings: AppSettings;
 	private drawers: Array<Drawer> = [];
@@ -32,8 +34,8 @@ export class SidebarTogglerComponent implements OnInit {
 	) {
 		
 		let workspace: Drawer = {
-			sidebarToggler: 'Workspaces',
-			sidebarContent: SidebarWorkspacesComponent,
+			title: 'Workspaces',
+			content: SidebarWorkspacesComponent,
 			isDisabled: () => {
 				return !this.settings.isConnected;
 			},
@@ -44,8 +46,8 @@ export class SidebarTogglerComponent implements OnInit {
 		this.addDrawer(workspace);
 		
 		let widgets: Drawer = {
-			sidebarToggler: 'Widgets',
-			sidebarContent: SidebarWidgetsComponent,
+			title: 'Widgets',
+			content: SidebarWidgetsComponent,
 			isDisabled: () => {
 				return true;
 			},
@@ -56,8 +58,8 @@ export class SidebarTogglerComponent implements OnInit {
 		this.addDrawer(widgets);
 		
 		let medias: Drawer = {
-			sidebarToggler: 'Medias',
-			sidebarContent: SidebarMediasComponent,
+			title: 'Medias',
+			content: SidebarMediasComponent,
 			isDisabled: () => {
 				return true;
 			},
@@ -80,15 +82,16 @@ export class SidebarTogglerComponent implements OnInit {
 		this.drawers.push(drawer);
 	}
 	
-	openDrawer(drawerName: string): void {
+	openDrawer(drawer: SidebarComponent): void {
 		
-		if(drawerName === this.currentDrawer) {
+		if(drawer === this.currentDrawer) {
 			this.drawer.close();
 			this.currentDrawer = null;
 		}
 		else {
 			this.drawer.open();
-			this.currentDrawer = drawerName;
+			this.currentDrawer = drawer;
+			this.sidebarContent.addComp();
 		}
 	}
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { MatDrawer } from '@angular/material/sidenav';
 import { AppSettings } from '@shared/settings';
 import { AppSettingsService } from '@shared/settings.service';
 
@@ -9,6 +10,7 @@ import { AppSettingsService } from '@shared/settings.service';
 })
 export class ToolbarComponent implements OnInit {
 		
+	@Input() menu: MatDrawer;
 	private settings: AppSettings;
 
 	constructor(

@@ -1,8 +1,9 @@
 <mat-toolbar fxFlex="none">
     <mat-toolbar-row>
         
-        <button mat-button [disabled]=true matTooltip="Go back to home page" routerLink="/">
-            <mat-icon>home</mat-icon>
+        <button mat-button matTooltip="{{ !menu.opened ? 'Open main menu' : 'Close main menu' }}" (click)="menu.toggle()">
+            <mat-icon *ngIf="!menu.opened">menu</mat-icon>
+            <mat-icon *ngIf="menu.opened">close</mat-icon>
         </button>
         
         <mat-divider vertical></mat-divider>
@@ -16,8 +17,6 @@
         <button mat-button matTooltip="Redo change" [disabled]=!settings.isConnected>
             <mat-icon>redo</mat-icon>
         </button>
-        
-        <!--<span>{{ settings.isConnected }}</span>-->
         
         <span class="toolbar-spacer"></span>
         

@@ -1,24 +1,24 @@
 <mat-menu #menuContext="matMenu">
-    <button mat-menu-item routerLink="/context/structure">
+    <button mat-menu-item routerLink="/context/structure" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">
         <mat-icon>layers</mat-icon>
         <span>Structure</span>
     </button>
-    <button mat-menu-item routerLink="/context/style">
+    <button mat-menu-item routerLink="/context/style" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">
         <mat-icon>format_paint</mat-icon>
         <span>Style</span>
     </button>
-    <button mat-menu-item routerLink="/context/events">
+    <button mat-menu-item routerLink="/context/events" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">
         <mat-icon>flash_on</mat-icon>
         <span>Events</span>
     </button>
-    <button mat-menu-item routerLink="/context/preview">
+    <button mat-menu-item routerLink="/context/preview" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">
         <mat-icon>visibility</mat-icon>
         <span>Preview</span>
     </button>
 </mat-menu>
 
 <button mat-button [disabled]=true matTooltip="Workspace context" [matMenuTriggerFor]="menuContext">
-    <mat-icon>menu</mat-icon>
+    <mat-icon>developer_mode</mat-icon>
     <span>Select</span>
     <mat-icon>expand_more</mat-icon>
 </button>

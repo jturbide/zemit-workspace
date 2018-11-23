@@ -68,6 +68,7 @@ import { ProfileToolbarButtonComponent, ProfileToolbarButtonDialogSignInComponen
 import { PageComponent } from './components/page/page.component';
 import { DocsComponent } from './components/docs/docs.component';
 import { ProfileAccountComponent } from './components/profile/account/profile-account.component';
+import { SidebarDirective } from './components/sidebar/sidebar.directive';
 
 @NgModule({
 	declarations: [
@@ -100,6 +101,7 @@ import { ProfileAccountComponent } from './components/profile/account/profile-ac
 		PageComponent,
 		ProfileToolbarButtonComponent,
 		ProfileToolbarButtonDialogSignInComponent,
+		SidebarDirective,
 		// ModalComponent
 	],
 	imports: [

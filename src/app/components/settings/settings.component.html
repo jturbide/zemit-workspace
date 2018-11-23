@@ -1,11 +1,7 @@
 <mat-menu #menuSettings="matMenu">
-    <button mat-menu-item routerLink="/settings">
+    <button mat-menu-item routerLink="/settings" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">
         <mat-icon>settings</mat-icon>
         <span>Settings</span>
-    </button>
-    <button mat-menu-item routerLink="/about">
-        <mat-icon>info</mat-icon>
-        <span>About Workspace Engine</span>
     </button>
 </mat-menu>
 

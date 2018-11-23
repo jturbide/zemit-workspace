@@ -17,17 +17,22 @@ html, body {
     user-select: none;
 }
 
+.active-route {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .mat-typography {
   font-size: 1rem;
   line-height: 1.5rem;
 }
 
-.mat-primary {
+.mat-raised-button.mat-primary {
   background-color: $matPrimaryBgColor !important;
   color: $matPrimaryTextColor !important;
 }
 
-.mat-secondary {
+.mat-raised-button.mat-secondary {
   background-color: $colorSuccessBg;
   color: $colorSuccessText;
 }

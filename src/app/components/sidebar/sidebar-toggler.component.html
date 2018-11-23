@@ -1,8 +1,8 @@
 <div fxLayout="column" fxFlex>
     <mat-button-toggle-group vertical name="drawersGroup" aria-label="Drawers">
         <ng-container *ngFor="let drawer of drawers">
-            <mat-button-toggle *ngIf="drawer.isVisible()" [disabled]="drawer.isDisabled()" class="sidenav-item vertical-rl" (change)="openDrawer(drawer.sidebarContent)">
-                {{ drawer.sidebarToggler }}
+            <mat-button-toggle *ngIf="drawer.isVisible()" [disabled]="drawer.isDisabled()" class="sidenav-item vertical-rl" (change)="openDrawer(drawer.content)">
+                {{ drawer.title }}
             </mat-button-toggle>
         </ng-container>
     </mat-button-toggle-group>

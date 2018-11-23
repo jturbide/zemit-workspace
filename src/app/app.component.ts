@@ -1,5 +1,6 @@
 import { Component, ViewChild  } from '@angular/core';
 import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
+import { MatDrawer } from '@angular/material/sidenav';
 
 @Component({
 	selector: 'app-root',
@@ -7,6 +8,8 @@ import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+	
+	@ViewChild('menu') menu: MatDrawer;
 	
 	constructor(
 		private router: Router
@@ -17,7 +20,7 @@ export class AppComponent {
 	ngOnInit() {
 		this.router.events.subscribe(route => {
 			if (route instanceof NavigationEnd) {
-				// this.context.value = route.url;
+				this.menu.close();
 			}
 		});
 	}
