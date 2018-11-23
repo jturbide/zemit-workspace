@@ -2,7 +2,7 @@
 // import { MatDialog, MatDialogRef, MatDialogConfig } from '@angular/material';
 
 // @Component({
-// 	selector: 'de-modal',
+// 	selector: 'we-modal',
 // 	templateUrl: './modal.component.html',
 // 	styleUrls: ['./modal.component.scss']
 // })

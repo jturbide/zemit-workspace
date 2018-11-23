@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'de-settings',
+	selector: 'we-settings',
 	templateUrl: './settings.component.html',
 	styleUrls: ['./settings.component.scss']
 })

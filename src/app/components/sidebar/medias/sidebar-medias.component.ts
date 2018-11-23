@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'de-sidebar-medias',
+  selector: 'we-sidebar-medias',
   templateUrl: './sidebar-medias.component.html',
   styleUrls: ['./sidebar-medias.component.scss']
 })

@@ -4,13 +4,13 @@ import { AppSettings } from '@shared/settings';
 import { AppSettingsService } from '@shared/settings.service';
 
 @Component({
-	selector: 'de-profile-toolbar-button',
+	selector: 'we-profile-toolbar-button',
 	templateUrl: './toolbar-button.component.html',
 	styleUrls: ['./toolbar-button.component.scss']
 })
 export class ProfileToolbarButtonComponent implements OnInit {
 	
-	public settings: AppSettings;
+	private settings: AppSettings;
 	
 	constructor(
 		private dialog: MatDialog,
@@ -47,7 +47,7 @@ export class ProfileToolbarButtonComponent implements OnInit {
 }
 
 @Component({
-	selector: 'de-profile-toolbar-button-dialog-sign-in',
+	selector: 'we-profile-toolbar-button-dialog-sign-in',
 	templateUrl: './dialog-sign-in/dialog.sign-in.html',
 	styleUrls: ['./dialog-sign-in/dialog.sign-in.scss']
 })

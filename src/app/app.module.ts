@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { AppSettingsService } from '@shared/settings.service';
+
 //Angular Material Components
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material';
@@ -140,7 +142,9 @@ import { ProfileAccountComponent } from './components/profile/account/profile-ac
 	entryComponents: [
 		ProfileToolbarButtonDialogSignInComponent
 	],
-	providers: [],
+	providers: [
+		AppSettingsService
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

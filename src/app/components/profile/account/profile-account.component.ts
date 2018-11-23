@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PageComponent } from '@components/page/page.component';
 
 @Component({
-	selector: 'de-profile-account',
+	selector: 'we-profile-account',
 	templateUrl: './profile-account.component.html',
 	styleUrls: ['./profile-account.component.scss']
 })
@@ -17,7 +17,7 @@ export class ProfileAccountComponent implements OnInit {
 }
 
 @Component({
-	selector: 'de-profile-account-page',
+	selector: 'we-profile-account-page',
 	templateUrl: './profile-account.page.component.html',
 	styleUrls: ['./profile-account.page.component.scss']
 })

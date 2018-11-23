@@ -1,6 +1,6 @@
 <div fxLayout="column" fxFlexFill>
     
-    <de-toolbar></de-toolbar>
+    <we-toolbar></we-toolbar>
     
     <div class="main-container" fxLayout="row" fxFlex>
         <mat-drawer-container autosize fxFlex>
@@ -11,12 +11,12 @@
                 </main>
             </mat-drawer-content>
             <mat-drawer #drawer class="sidenav-content" mode="side" position="end">
-                <de-sidebar-content></de-sidebar-content>
+                <we-sidebar-content></we-sidebar-content>
             </mat-drawer>
         </mat-drawer-container>
         
         <div class="sidenav-items">
-            <de-sidebar-toggler fxFlex [drawer]="drawer"></de-sidebar-toggler>
+            <we-sidebar-toggler fxFlex [drawer]="drawer"></we-sidebar-toggler>
         </div>
     </div>
 </div>

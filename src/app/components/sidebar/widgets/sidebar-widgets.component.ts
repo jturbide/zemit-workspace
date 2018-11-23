@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'de-sidebar-widgets',
+  selector: 'we-sidebar-widgets',
   templateUrl: './sidebar-widgets.component.html',
   styleUrls: ['./sidebar-widgets.component.scss']
 })

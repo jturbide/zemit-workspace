@@ -3,10 +3,9 @@ import { AppSettings } from '@shared/settings';
 import { AppSettingsService } from '@shared/settings.service';
 
 @Component({
-	selector: 'de-toolbar',
+	selector: 'we-toolbar',
 	templateUrl: './toolbar.component.html',
-	styleUrls: ['./toolbar.component.scss'],
-	providers: [AppSettingsService]
+	styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
 		

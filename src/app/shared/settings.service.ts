@@ -6,7 +6,7 @@ import { AppSettings } from "@shared/settings";
 @Injectable()
 export class AppSettingsService {
     
-    public settings: AppSettings = null;
+    private settings: AppSettings = null;
     
     getAll(): Observable<AppSettings> {
         

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PageComponent } from '@components/page/page.component';
 
 @Component({
-  selector: 'de-docs-page',
+  selector: 'we-docs-page',
   templateUrl: './docs.component.html',
   styleUrls: ['./docs.component.scss']
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'de-bg-move',
+  selector: 'we-bg-move',
   templateUrl: './bg-move.component.html',
   styleUrls: ['./bg-move.component.scss']
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'de-sidebar-debug',
+  selector: 'we-sidebar-debug',
   templateUrl: './sidebar-debug.component.html',
   styleUrls: ['./sidebar-debug.component.scss']
 })
