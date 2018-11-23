@@ -1,0 +1,21 @@
+<mat-menu #menuProfile="matMenu">
+    <button mat-menu-item routerLink="/account">
+        <mat-icon>person</mat-icon>
+        <span>My account</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Sign-out</span>
+    </button>
+</mat-menu>
+
+<button *ngIf="!settings.isConnected" (click)="openSignInDialog()" color="secondary" mat-raised-button matTooltip="Sign-In with Google">
+    <mat-icon>person_pin</mat-icon>
+    <span>Sign-in</span>
+</button>
+
+<button mat-button *ngIf="settings.isConnected" matTooltip="My profile" [matMenuTriggerFor]="menuProfile">
+    <mat-icon>person</mat-icon>
+    <span>Danny</span>
+    <mat-icon>expand_more</mat-icon>
+</button>

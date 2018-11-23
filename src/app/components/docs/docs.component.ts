@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { PageComponent } from '@components/page/page.component';
 
 @Component({
-  selector: 'de-docs-page',
+  selector: 'de-docs',
   templateUrl: './docs.component.html',
   styleUrls: ['./docs.component.scss']
 })
-export class DocsPageComponent implements PageComponent {
+export class DocsComponent implements OnInit {
 
   constructor() { }
 

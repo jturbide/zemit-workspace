@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
-import { SettingsComponent } from './components/settings/settings.component';
-import { DocsComponent } from './pages/docs/docs.component';
-import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { ContextStructureComponent } from './components/context/structure/context-structure.component';
-import { ContextStyleComponent } from './components/context/style/context-style.component';
-import { ContextEventsComponent } from './components/context/events/context-events.component';
-import { ContextPreviewComponent } from './components/context/preview/context-preview.component';
+import { HomePageComponent } from './pages/home/home.component';
+import { AboutPageComponent } from './pages/about/about.component';
+import { SettingsPageComponent } from './components/settings/settings.page.component';
+import { DocsPageComponent } from './pages/docs/docs.component';
+import { NotFoundPageComponent } from './pages/not-found/not-found.component';
+import { ContextStructurePageComponent } from './components/context/structure/context-structure.component';
+import { ContextStylePageComponent } from './components/context/style/context-style.component';
+import { ContextEventsPageComponent } from './components/context/events/context-events.component';
+import { ContextPreviewPageComponent } from './components/context/preview/context-preview.component';
 
 const routes: Routes = [
-	{ path: '', component: HomeComponent },
-	{ path: 'about', component: AboutComponent },
-	{ path: 'settings', component: SettingsComponent },
-	{ path: 'docs', component: DocsComponent },
-	{ path: 'context/structure', component: ContextStructureComponent },
-	{ path: 'context/style', component: ContextStyleComponent },
-	{ path: 'context/events', component: ContextEventsComponent },
-	{ path: 'context/preview', component: ContextPreviewComponent },
-	{ path: '**', component: PageNotFoundComponent }	
+	{ path: '', component: HomePageComponent },
+	{ path: 'about', component: AboutPageComponent },
+	{ path: 'settings', component: SettingsPageComponent },
+	{ path: 'docs', component: DocsPageComponent },
+	{ path: 'context/structure', component: ContextStructurePageComponent },
+	{ path: 'context/style', component: ContextStylePageComponent },
+	{ path: 'context/events', component: ContextEventsPageComponent },
+	{ path: 'context/preview', component: ContextPreviewPageComponent },
+	{ path: '**', component: NotFoundPageComponent }	
 ];
 
 @NgModule({

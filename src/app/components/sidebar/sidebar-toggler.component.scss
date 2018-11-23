@@ -5,12 +5,14 @@
   min-width: 0;
   padding: 0.5rem 0;
 }
-.sidenav-items {
+/deep/ .sidenav-items {
   border-left: rgba(0, 0, 0, 0.12) solid 1px;
 }
-.sidenav-items .mat-button-toggle-group {
+/deep/ .sidenav-items .mat-button-toggle-group {
   border-radius: 0;
-  border: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 /deep/ .sidenav-item.vertical-rl .mat-button-toggle-label-content {
   writing-mode: vertical-rl;

@@ -1,22 +1,22 @@
 <div fxLayout="column" fxFlex>
     <mat-button-toggle-group vertical name="drawers" aria-label="Drawers">
-        <mat-button-toggle class="sidenav-item vertical-rl" (click)="openDrawer('workspaces')">
+        <mat-button-toggle [disabled]=true class="sidenav-item vertical-rl" (change)="openDrawer('workspaces')">
             Workspaces
         </mat-button-toggle>
-        <mat-button-toggle class="sidenav-item vertical-rl" (click)="openDrawer('widgets')">
+        <mat-button-toggle [disabled]=true class="sidenav-item vertical-rl" (change)="openDrawer('widgets')">
             Widgets
         </mat-button-toggle>
-        <mat-button-toggle class="sidenav-item vertical-rl" (click)="openDrawer('medias')">
+        <mat-button-toggle [disabled]=true class="sidenav-item vertical-rl" (change)="openDrawer('medias')">
             Medias
         </mat-button-toggle>
-        <mat-button-toggle class="sidenav-item vertical-rl" (click)="openDrawer('debug')">
-            Debug
-        </mat-button-toggle>
+        <!--<mat-button-toggle class="sidenav-item vertical-rl" (click)="openDrawer('debug')">-->
+        <!--    Debug-->
+        <!--</mat-button-toggle>-->
     </mat-button-toggle-group>
     
     <span class="sidenav-spacer"></span>
     
-    <a href="https://www.zemit.com" target="_blank" class="sidenav-item sidenav-icon" type="button" mat-button>
+    <a href="https://www.zemit.com" matTooltip="We're Zemit, visit our website!" matTooltipPosition="left" target="_blank" class="sidenav-item sidenav-icon" type="button" mat-button>
         <img style="max-width: 1.5rem" src="./assets/logo.png" />
     </a>
 </div>

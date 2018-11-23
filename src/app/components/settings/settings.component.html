@@ -1,3 +1,14 @@
-<p>
-  settings works!
-</p>
+<mat-menu #menuSettings="matMenu">
+    <button mat-menu-item routerLink="/settings">
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+    </button>
+    <button mat-menu-item routerLink="/about">
+        <mat-icon>info</mat-icon>
+        <span>About Desk Engine</span>
+    </button>
+</mat-menu>
+
+<button mat-button [disabled]=true matTooltip="Settings" [matMenuTriggerFor]="menuSettings">
+    <mat-icon>more_vert</mat-icon>
+</button>

@@ -1,7 +1,26 @@
+@import '~src/variables.scss';
+
 :host {
-    background-color: #aa8fd8;
-    color: white;
+    background-color: $dePrimaryBgColor;
+    color: $dePrimaryTextColor;
     text-shadow: rgba(0, 0, 0, 0.5) 1px 1px;
+}
+
+:host > div {
+  z-index: 2;
+  position: relative;
+  padding: 10vh;
+}
+:host::before {
+  z-index: 1;
+  content: "";
+  background: url(src/assets/mountains.png) center 50vh no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.333;
 }
 
 .content {
@@ -16,9 +35,10 @@
 
 h1 {
     margin: 0;
+    font-weight: bold;
 }
 
 hr {
-    border-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
     margin: 1rem 0;
 }

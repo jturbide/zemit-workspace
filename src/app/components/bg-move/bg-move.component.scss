@@ -1,3 +1,5 @@
+@import '~src/variables.scss';
+
 :host {
     position: absolute;
     top: 0;
@@ -8,12 +10,12 @@
 }
 :host .bg-move-content {
     content: " ";
-    left: -50%;
-    top: -50%;
+    left: -25%;
+    top: -25%;
     position: absolute;
-    width: 200%;
-    height: 200%;
-    background: url(src/assets/logo-light.png);
+    width: 150%;
+    height: 150%;
+    background: url(#{$logoLightBgUrl});
     background-size: 10vmax;
     pointer-events: none;
     opacity: 0.05;

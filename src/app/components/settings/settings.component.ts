@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'de-settings',
-  templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.scss']
+	selector: 'de-settings',
+	templateUrl: './settings.component.html',
+	styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent implements OnInit {
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+		
+	}
 
 }

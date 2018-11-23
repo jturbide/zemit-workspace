@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { PageComponent } from '@components/page/page.component';
 
 @Component({
-	selector: 'de-home',
+	selector: 'de-home-page',
 	templateUrl: './home.component.html',
 	styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomePageComponent implements PageComponent {
 
 	constructor() { }
 
