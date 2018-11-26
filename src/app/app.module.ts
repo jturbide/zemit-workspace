@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { AppSettingsService } from '@shared/settings.service';
+import { PageService } from '@shared/page.service';
 
 //Angular Material Components
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -69,6 +70,8 @@ import { PageComponent } from './components/page/page.component';
 import { DocsComponent } from './components/docs/docs.component';
 import { ProfileAccountComponent } from './components/profile/account/profile-account.component';
 import { SidebarDirective } from './components/sidebar/sidebar.directive';
+import { ContextPageComponent } from './components/context/context.component';
+import { DashboardPageComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
 	declarations: [
@@ -102,6 +105,8 @@ import { SidebarDirective } from './components/sidebar/sidebar.directive';
 		ProfileToolbarButtonComponent,
 		ProfileToolbarButtonDialogSignInComponent,
 		SidebarDirective,
+		ContextPageComponent,
+		DashboardPageComponent,
 		// ModalComponent
 	],
 	imports: [
@@ -142,10 +147,14 @@ import { SidebarDirective } from './components/sidebar/sidebar.directive';
 		FlexLayoutModule
 	],
 	entryComponents: [
+		SidebarWorkspacesComponent,
+		SidebarMediasComponent,
+		SidebarWidgetsComponent,
 		ProfileToolbarButtonDialogSignInComponent
 	],
 	providers: [
-		AppSettingsService
+		AppSettingsService,
+		PageService
 	],
 	bootstrap: [AppComponent]
 })

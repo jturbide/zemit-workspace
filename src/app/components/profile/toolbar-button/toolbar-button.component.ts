@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MatDialogConfig, MAT_DIALOG_DATA } from "@angular/material";
 import { AppSettings } from '@shared/settings';
 import { AppSettingsService } from '@shared/settings.service';
+import { environment } from '@env/environment';
 
 @Component({
 	selector: 'we-profile-toolbar-button',
@@ -20,6 +21,8 @@ export class ProfileToolbarButtonComponent implements OnInit {
 	}
 	
 	ngOnInit() {
+		
+		console.log(environment);
 		
 		this.appSettingsService.getAll().subscribe(settings => {
 			this.settings = settings;

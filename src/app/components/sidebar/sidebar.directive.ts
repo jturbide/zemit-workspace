@@ -1,7 +1,7 @@
 import { Directive, ViewContainerRef } from '@angular/core';
 
 @Directive({
-	selector: '[weSidebar]'
+	selector: '[we-sidebar]'
 })
 export class SidebarDirective {
 

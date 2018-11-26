@@ -3,11 +3,11 @@ import { PageComponent } from '@components/page/page.component';
 import { PageService } from '@shared/page.service';
 
 @Component({
-	selector: 'we-docs-page',
-	templateUrl: './docs.component.html',
-	styleUrls: ['./docs.component.scss']
+	selector: 'we-dashboard',
+	templateUrl: './dashboard.component.html',
+	styleUrls: ['./dashboard.component.scss']
 })
-export class DocsPageComponent implements PageComponent {
+export class DashboardPageComponent implements PageComponent {
 
 	constructor(
 		private pageService: PageService
@@ -17,7 +17,7 @@ export class DocsPageComponent implements PageComponent {
 
 	ngOnInit() {
 		
-		this.pageService.setTitle('Documentation');
+		this.pageService.setTitle('Dashboard');
 	}
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild, ComponentFactoryResolver } from '@angular/core';
 import { SidebarDirective } from './sidebar.directive';
 import { MatDrawer } from '@angular/material/sidenav';
+import { SidebarDrawer } from '@components/sidebar/sidebar-toggler.component';
 
 export interface SidebarComponent {
 	
@@ -14,7 +15,7 @@ export interface SidebarComponent {
 export class SidebarContentComponent implements OnInit {
 	
 	@Input() drawer: MatDrawer;
-	@Input() currentDrawer: SidebarComponent;
+	
 	@ViewChild(SidebarDirective) weSidebar: SidebarDirective;
 	
 	constructor(
@@ -23,15 +24,15 @@ export class SidebarContentComponent implements OnInit {
 		
 	}
 	
-	public addComp() {
+	public addComp(drawer: SidebarDrawer) {
 		
-		const componentFactory = this.componentFactoryResolver.resolveComponentFactory(this.currentDrawer);
+		const componentFactory = this.componentFactoryResolver.resolveComponentFactory(drawer.content);
 		const viewContainerRef = this.weSidebar.viewContainerRef;
 		const componentRef = viewContainerRef.createComponent(componentFactory);
 	}
-	public removeComp() {
+	public removeComp(drawer: SidebarDrawer) {
 		
-		const componentFactory = this.componentFactoryResolver.resolveComponentFactory(this.currentDrawer);
+		const componentFactory = this.componentFactoryResolver.resolveComponentFactory(drawer.content);
 		const viewContainerRef = this.weSidebar.viewContainerRef;
 		const componentRef = viewContainerRef.remove();
 	}

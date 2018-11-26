@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PageComponent } from '@components/page/page.component';
+import { PageService } from '@shared/page.service';
 
 @Component({
 	selector: 'we-home-page',
@@ -8,9 +9,15 @@ import { PageComponent } from '@components/page/page.component';
 })
 export class HomePageComponent implements PageComponent {
 
-	constructor() { }
+	constructor(
+		private pageService: PageService
+	) {
+		
+	}
 
 	ngOnInit() {
+		
+		this.pageService.setTitle('Workspace Engine');
 	}
 
 }

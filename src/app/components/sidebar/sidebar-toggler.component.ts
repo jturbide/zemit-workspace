@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 import { AppSettings } from '@shared/settings';
 import { AppSettingsService } from '@shared/settings.service';
@@ -8,7 +8,7 @@ import { SidebarWorkspacesComponent } from '@components/sidebar/workspaces/sideb
 import { SidebarWidgetsComponent } from '@components/sidebar/widgets/sidebar-widgets.component';
 import { SidebarMediasComponent } from '@components/sidebar/medias/sidebar-medias.component';
 
-interface Drawer {
+export interface SidebarDrawer {
   title: string,
   content: SidebarComponent,
   isDisabled(): boolean,
@@ -23,17 +23,17 @@ interface Drawer {
 export class SidebarTogglerComponent implements OnInit {
 	
 	@Input() drawer: MatDrawer;
-	@Input() currentDrawer: SidebarComponent;
 	@Input() sidebarContent: SidebarContentComponent;
 	
 	private settings: AppSettings;
-	private drawers: Array<Drawer> = [];
+	private drawers: Array<SidebarDrawer> = [];
+	private currentDrawer: SidebarDrawer = null;
 	
 	constructor(
 		private appSettingsService: AppSettingsService
 	) {
 		
-		let workspace: Drawer = {
+		let workspace: SidebarDrawer = {
 			title: 'Workspaces',
 			content: SidebarWorkspacesComponent,
 			isDisabled: () => {
@@ -45,7 +45,7 @@ export class SidebarTogglerComponent implements OnInit {
 		};
 		this.addDrawer(workspace);
 		
-		let widgets: Drawer = {
+		let widgets: SidebarDrawer = {
 			title: 'Widgets',
 			content: SidebarWidgetsComponent,
 			isDisabled: () => {
@@ -57,7 +57,7 @@ export class SidebarTogglerComponent implements OnInit {
 		};
 		this.addDrawer(widgets);
 		
-		let medias: Drawer = {
+		let medias: SidebarDrawer = {
 			title: 'Medias',
 			content: SidebarMediasComponent,
 			isDisabled: () => {
@@ -77,21 +77,26 @@ export class SidebarTogglerComponent implements OnInit {
 		});
 	}
 	
-	addDrawer(drawer: Drawer): void {
+	addDrawer(drawer: SidebarDrawer): void {
 		
 		this.drawers.push(drawer);
 	}
 	
-	openDrawer(drawer: SidebarComponent): void {
+	openDrawer(drawer: SidebarDrawer): void {
 		
 		if(drawer === this.currentDrawer) {
-			this.drawer.close();
-			this.currentDrawer = null;
+			
+			this.drawer.close().then(() => {
+				this.sidebarContent.removeComp(drawer);
+				this.currentDrawer = null;
+			});
 		}
 		else {
-			this.drawer.open();
-			this.currentDrawer = drawer;
-			this.sidebarContent.addComp();
+			
+			this.sidebarContent.addComp(drawer);
+			this.drawer.open().then(() => {
+				this.currentDrawer = drawer;
+			});;
 		}
 	}
 }

@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 import { AppSettings } from '@shared/settings';
 import { AppSettingsService } from '@shared/settings.service';
+import { PageService } from '@shared/page.service';
 
 @Component({
 	selector: 'we-toolbar',
@@ -14,7 +15,8 @@ export class ToolbarComponent implements OnInit {
 	private settings: AppSettings;
 
 	constructor(
-		private appSettingsService: AppSettingsService
+		private appSettingsService: AppSettingsService,
+		private pageService: PageService
 	) {
 		
 	}

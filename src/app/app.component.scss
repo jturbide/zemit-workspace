@@ -10,3 +10,15 @@
   min-height: 100%;
   display: flex;
 }
+
+.profile-card-image {
+  background-image: url(src/assets/danny-coulombe.jpeg);
+  background-size: cover;
+}
+.profile-card {
+  border-radius: 0;
+  box-shadow: none !important;
+}
+/deep/ .profile-card .mat-card-subtitle {
+  margin-bottom: 0;
+}

@@ -4,6 +4,7 @@
     background-color: $dePrimaryBgColor;
     color: $dePrimaryTextColor;
     text-shadow: rgba(0, 0, 0, 0.5) 1px 1px;
+    position: relative;
 }
 
 :host > div {
@@ -41,4 +42,8 @@ h1 {
 hr {
     border-color: rgba(255, 255, 255, 0.5);
     margin: 1rem 0;
+}
+
+/deep/ .bg-move-content {
+  opacity: 0.1 !important;
 }

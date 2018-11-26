@@ -10,19 +10,23 @@
         
         <we-context-toggler></we-context-toggler>
         
-        <button mat-button matTooltip="Undo change" [disabled]=!settings.isConnected>
+        <button mat-button matTooltip="Undo change" [disabled]="true">
             <mat-icon>undo</mat-icon>
         </button>
         
-        <button mat-button matTooltip="Redo change" [disabled]=!settings.isConnected>
+        <button mat-button matTooltip="Redo change" [disabled]="true">
             <mat-icon>redo</mat-icon>
         </button>
         
-        <span class="toolbar-spacer"></span>
+        <mat-divider vertical></mat-divider>
+        
+        <span class="toolbar-spacer">
+            <span>{{ pageService.getTitle() }}</span>
+        </span>
         
         <we-profile-toolbar-button></we-profile-toolbar-button>
         
-        <mat-divider vertical></mat-divider>
+        <!--<mat-divider vertical></mat-divider>-->
         
         <we-docs></we-docs>
         <we-settings></we-settings>

@@ -1,3 +1,3 @@
 export class AppSettings {
-    isConnected: boolean = false
+    isConnected: boolean = true
 }

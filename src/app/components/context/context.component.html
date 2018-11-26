@@ -1,0 +1,16 @@
+<mat-drawer-container autosize fxFlex>
+    <mat-drawer-content fxLayout="column" fxLayoutAlign="center center" fxFlex class="mat-typography">
+        
+        <we-bg-move></we-bg-move>
+        <div class="empty-workspace">
+            No workspace loaded
+        </div>
+    </mat-drawer-content>
+    <mat-drawer #drawer class="sidenav-content" mode="side" position="end">
+        <we-sidebar-content fxFlex #sidebarContent [drawer]="drawer"></we-sidebar-content>
+    </mat-drawer>
+</mat-drawer-container>
+
+<div class="sidenav-items">
+    <we-sidebar-toggler fxFlex [drawer]="drawer" [sidebarContent]="sidebarContent"></we-sidebar-toggler>
+</div>

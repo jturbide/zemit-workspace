@@ -1,0 +1,6 @@
+.actions button {
+    width: 100%;
+}
+/deep/ [matprefix] {
+  margin-right: 1rem !important;
+}
