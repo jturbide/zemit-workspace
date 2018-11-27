@@ -11,7 +11,7 @@ import { environment } from '@env/environment';
 })
 export class ProfileToolbarButtonComponent implements OnInit {
 	
-	private settings: AppSettings;
+	public settings: AppSettings;
 	
 	constructor(
 		private dialog: MatDialog,

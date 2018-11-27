@@ -25,8 +25,8 @@ export class SidebarTogglerComponent implements OnInit {
 	@Input() drawer: MatDrawer;
 	@Input() sidebarContent: SidebarContentComponent;
 	
-	private settings: AppSettings;
-	private drawers: Array<SidebarDrawer> = [];
+	public settings: AppSettings;
+	public drawers: Array<SidebarDrawer> = [];
 	private currentDrawer: SidebarDrawer = null;
 	
 	constructor(

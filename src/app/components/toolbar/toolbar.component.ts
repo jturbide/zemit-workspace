@@ -12,11 +12,11 @@ import { PageService } from '@shared/page.service';
 export class ToolbarComponent implements OnInit {
 		
 	@Input() menu: MatDrawer;
-	private settings: AppSettings;
+	public settings: AppSettings;
 
 	constructor(
 		private appSettingsService: AppSettingsService,
-		private pageService: PageService
+		public pageService: PageService
 	) {
 		
 	}

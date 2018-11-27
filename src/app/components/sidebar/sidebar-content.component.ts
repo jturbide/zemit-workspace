@@ -26,12 +26,14 @@ export class SidebarContentComponent implements OnInit {
 	
 	public addComp(drawer: SidebarDrawer) {
 		
+		// @ts-ignore
 		const componentFactory = this.componentFactoryResolver.resolveComponentFactory(drawer.content);
 		const viewContainerRef = this.weSidebar.viewContainerRef;
 		const componentRef = viewContainerRef.createComponent(componentFactory);
 	}
 	public removeComp(drawer: SidebarDrawer) {
 		
+		// @ts-ignore
 		const componentFactory = this.componentFactoryResolver.resolveComponentFactory(drawer.content);
 		const viewContainerRef = this.weSidebar.viewContainerRef;
 		const componentRef = viewContainerRef.remove();

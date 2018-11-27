@@ -9,7 +9,7 @@ import { AppSettingsService } from '@shared/settings.service';
 })
 export class DocsComponent implements OnInit {
 	
-	private settings: AppSettings;
+	public settings: AppSettings;
 
 	constructor(
 		private appSettingsService: AppSettingsService

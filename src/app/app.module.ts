@@ -87,6 +87,7 @@ import { DashboardPageComponent } from './pages/dashboard/dashboard.component';
 		AboutPageComponent,
 		SettingsPageComponent,
 		DocsPageComponent,
+		ProfileAccountPageComponent,
 		
 		// Components
 		ContextTogglerComponent,
