@@ -17,7 +17,7 @@ export class HomePageComponent implements PageComponent {
 
 	ngOnInit() {
 		
-		this.pageService.setTitle('Workspace Engine');
+		this.pageService.setTitle('Dashboard');
 	}
 
 }

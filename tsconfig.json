@@ -18,6 +18,7 @@
       "dom"
     ],
     "paths": {
+      "@data/*": ["./src/app/data/*"],
       "@constants/*": ["./src/app/constants/*"],
       "@components/*": ["./src/app/components/*"],
       "@directives/*": ["./src/app/directives/*"],

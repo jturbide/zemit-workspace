@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ComponentFactoryResolver } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ComponentFactoryResolver, Type } from '@angular/core';
 import { SidebarDirective } from './sidebar.directive';
 import { MatDrawer } from '@angular/material/sidenav';
 import { SidebarDrawer } from '@components/sidebar/sidebar-toggler.component';

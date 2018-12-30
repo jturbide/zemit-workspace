@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>
+    <span *ngIf="data.isNew">Create a new workspace</span>
+    <span *ngIf="!data.isNew">Edit workspace</span>
+</h2>
+
+<mat-dialog-content>
+    
+    <form>
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Title" [(ngModel)]="data.workspace.title" name="title">
+        </mat-form-field>
+        
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Description" [(ngModel)]="data.workspace.desc" name="desc">
+        </mat-form-field>
+    </form>
+ 
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button (click)="cancel()">Cancel</button>
+    <button *ngIf="data.isNew" mat-raised-button color="primary" (click)="create()" [disabled]="!data.workspace.isValid()">Create</button>
+    <button *ngIf="!data.isNew" mat-raised-button color="primary" (click)="update()" [disabled]="!data.workspace.isValid()">Update</button>
+</mat-dialog-actions>

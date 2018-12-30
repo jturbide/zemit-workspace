@@ -10,11 +10,11 @@
             </mat-drawer-content>
             <mat-drawer #menu class="sidenav-content" mode="over" position="start">
                 
-                <mat-card class="profile-card">
+                <mat-card class="profile-card" *ngIf="settings.isConnected">
                     <mat-card-header>
-                        <div mat-card-avatar class="profile-card-image"></div>
-                        <mat-card-title>Danny Coulombe</mat-card-title>
-                        <mat-card-subtitle>Administrator</mat-card-subtitle>
+                        <div mat-card-avatar class="profile-card-image" [ngStyle]="{ 'background-image': 'url(' + currentUser.avatar + ')' }"></div>
+                        <mat-card-title>{{ currentUser.getCompleteName() }}</mat-card-title>
+                        <mat-card-subtitle>{{ currentUser.role }}</mat-card-subtitle>
                     </mat-card-header>
                 </mat-card>
                     
@@ -34,12 +34,12 @@
                     
                     <h3 mat-subheader>Tools</h3>
                     
-                    <mat-list-item routerLink="/dashboard" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">
+                    <mat-list-item routerLink="/" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">
                         <mat-icon mat-list-icon>dashboard</mat-icon>
                         <h3 mat-line>Dashboard</h3>
                     </mat-list-item>
                     
-                    <mat-list-item routerLink="/context" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">
+                    <mat-list-item routerLink="/context" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: false}">
                         <mat-icon mat-list-icon>developer_mode</mat-icon>
                         <h3 mat-line>Context</h3>
                     </mat-list-item>

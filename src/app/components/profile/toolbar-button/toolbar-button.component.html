@@ -1,9 +1,9 @@
 <mat-menu #menuProfile="matMenu">
-    <button mat-menu-item routerLink="/account" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">
-        <mat-icon>person</mat-icon>
-        <span>My account</span>
-    </button>
-    <button mat-menu-item>
+    <!--<button mat-menu-item routerLink="/account" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">-->
+    <!--    <mat-icon>person</mat-icon>-->
+    <!--    <span>My account</span>-->
+    <!--</button>-->
+    <button mat-menu-item (click)="openSignOutDialog()">
         <mat-icon>exit_to_app</mat-icon>
         <span>Sign-out</span>
     </button>
@@ -15,7 +15,7 @@
 </button>
 
 <button mat-button *ngIf="settings.isConnected" matTooltip="My profile" [matMenuTriggerFor]="menuProfile">
-    <mat-icon>person</mat-icon>
-    <span>Danny</span>
+    <div mat-card-avatar class="profile-card-image" [ngStyle]="{ 'background-image': 'url(' + currentUser.avatar + ')' }"></div>
+    <span>{{ currentUser.firstName }}</span>
     <mat-icon>expand_more</mat-icon>
 </button>

@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~material-design-icons-iconfont/dist/material-design-icons.css';
 @import "~@angular/material/prebuilt-themes/indigo-pink";
+@import '~orgchart.js/src/orgchart.css';
 @import 'sizing';
 @import 'variables';
 
@@ -37,4 +38,26 @@ html, body {
 
 .mat-button-wrapper > .mat-icon + * {
   margin-left: 0.5rem;
+}
+
+/**
+ * MatDialog
+ */
+[mat-dialog-title] {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  margin: -25px -24px 25px -25px !important;
+  padding: 10px 24px !important;
+}
+.mat-dialog-actions {
+  margin: -24px !important;
+  margin-top: 20px !important;
+  padding: 5px 24px !important;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-top: rgba(0, 0, 0, 0.05) solid 1px;
+  box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, 0.25);
+  justify-content: stretch;
+}
+.mat-dialog-actions > * {
+  flex: 1;
 }

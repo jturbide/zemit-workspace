@@ -2,8 +2,16 @@
   padding: 0.5rem;
 }
 .sidebar-content-container {
-  min-width: 25rem;
+  width: 25rem;
+  max-width: 25rem;
 }
 /deep/ .sidebar-content-container > * {
   height: 100%;
+}
+/deep/ .mat-accordion {
+  background-color: #f6f6f6;
+  display: block;
+  padding: 1rem;
+  min-height: 100%;
+  box-sizing: border-box;
 }

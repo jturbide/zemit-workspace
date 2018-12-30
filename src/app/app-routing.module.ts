@@ -19,6 +19,7 @@ const routes: Routes = [
 	{ path: 'settings', component: SettingsPageComponent },
 	{ path: 'docs', component: DocsPageComponent },
 	{ path: 'context', component: ContextPageComponent },
+	{ path: 'context/:workspaceId', component: ContextPageComponent },
 	{ path: 'context/structure', component: ContextStructurePageComponent },
 	{ path: 'context/style', component: ContextStylePageComponent },
 	{ path: 'context/events', component: ContextEventsPageComponent },

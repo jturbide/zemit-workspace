@@ -6,23 +6,42 @@
 		<input type="text" placeholder="Filter workspaces.." aria-label="Number" matInput>
 	</mat-form-field>
 	
-	<mat-expansion-panel>
-		<mat-expansion-panel-header>
-			<mat-panel-title>
-				Nuagerie
-			</mat-panel-title>
-		</mat-expansion-panel-header>
-		<ng-template matExpansionPanelContent>
-			This is the content
-		</ng-template>
-	</mat-expansion-panel>
-	
-	<div fxLayoutAlign="center center" style="flex: 1 1 auto">
-		No workspace available yet.
+	<div class="zm-mb-3" fxFlex style="flex: 1 1 auto; overflow: auto;">
+		<ng-container *ngIf="workspaces.length > 0">
+			<mat-accordion>
+				<mat-expansion-panel *ngFor="let workspace of workspaces | notDeleted">
+					<mat-expansion-panel-header>
+						<mat-panel-title>
+							{{ workspace.title }}
+						</mat-panel-title>
+					</mat-expansion-panel-header>
+					<div>
+						<p>{{ workspace.desc }}</p>
+						
+						<mat-action-row>
+							<button color="warn" mat-button matTooltip="Remove workspace" (click)="openWorkspaceRemoveDialog(workspace)">
+								Remove
+							</button>
+							<button mat-button matTooltip="Edit workspace" (click)="openWorkspaceAddDialog(workspace)">
+								Edit
+							</button>
+							
+							<button color="primary" mat-button matTooltip="Load workspace" (click)="loadWorkspace(workspace)">
+								Load
+							</button>
+					    </mat-action-row>
+					</div>
+				</mat-expansion-panel>
+			</mat-accordion>
+		</ng-container>
+		
+		<div *ngIf="workspaces.length === 0" fxLayoutAlign="center center">
+			No workspace available yet.
+		</div>
 	</div>
 	
 	<div class="actions">
-		<button (click)="addWorkspace()" color="secondary" mat-raised-button>
+		<button (click)="openWorkspaceAddDialog()" color="secondary" mat-raised-button>
 		    <mat-icon>add_circle_outline</mat-icon>
 		    <span>Add a new workspace</span>
 		</button>

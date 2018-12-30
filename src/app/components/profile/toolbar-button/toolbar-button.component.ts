@@ -3,6 +3,8 @@ import { MatDialog, MatDialogRef, MatDialogConfig, MAT_DIALOG_DATA } from "@angu
 import { AppSettings } from '@shared/settings';
 import { AppSettingsService } from '@shared/settings.service';
 import { environment } from '@env/environment';
+import { ProfileService } from '@shared/profile.service';
+import { User } from '@models/user.model';
 
 @Component({
 	selector: 'we-profile-toolbar-button',
@@ -12,10 +14,12 @@ import { environment } from '@env/environment';
 export class ProfileToolbarButtonComponent implements OnInit {
 	
 	public settings: AppSettings;
+	public currentUser: User = null;
 	
 	constructor(
 		private dialog: MatDialog,
-		private appSettingsService: AppSettingsService
+		private appSettingsService: AppSettingsService,
+		private profileService: ProfileService
 	) {
 		
 	}
@@ -23,6 +27,8 @@ export class ProfileToolbarButtonComponent implements OnInit {
 	ngOnInit() {
 		
 		console.log(environment);
+		
+		this.currentUser = this.profileService.getCurrentUser();
 		
 		this.appSettingsService.getAll().subscribe(settings => {
 			this.settings = settings;
@@ -35,16 +41,47 @@ export class ProfileToolbarButtonComponent implements OnInit {
 
         dialogConfig.disableClose = true;
         dialogConfig.autoFocus = true;
-        dialogConfig.data = {
-        	id: 1
-        };
+        dialogConfig.data = {};
 
         const dialogRef = this.dialog.open(ProfileToolbarButtonDialogSignInComponent, dialogConfig);
         
         dialogRef.afterClosed().subscribe(data => {
-        	this.settings.isConnected = true;
-        	console.log(data);
+        	
+        	if(!data) {
+        		return;
+        	}
+        	
+        	if(data.signIn) {
+        		this.settings.isConnected = true;
+        	}
         });
+	}
+	
+	openSignOutDialog() {
+		
+		const dialogConfig = new MatDialogConfig();
+
+        dialogConfig.disableClose = true;
+        dialogConfig.autoFocus = true;
+        dialogConfig.data = {};
+
+        const dialogRef = this.dialog.open(ProfileToolbarButtonDialogSignOutComponent, dialogConfig);
+        
+        dialogRef.afterClosed().subscribe(data => {
+        	
+        	if(!data) {
+        		return;
+        	}
+        	
+        	if(data.signOut) {
+        		this.signOut();
+        	}
+        });
+	}
+	
+	signOut() {
+		
+		this.settings.isConnected = false;
 	}
 
 }
@@ -69,11 +106,42 @@ export class ProfileToolbarButtonDialogSignInComponent implements OnInit {
 	
 	connect() {
         this.dialogRef.close({
-        	value: 'test'
+        	signIn: true
         });
     }
 
     close() {
+        this.dialogRef.close();
+    }
+
+}
+
+@Component({
+	selector: 'we-profile-toolbar-button-dialog-sign-out',
+	templateUrl: './dialog-sign-out/dialog.sign-out.html',
+	styleUrls: ['./dialog-sign-out/dialog.sign-out.scss']
+})
+export class ProfileToolbarButtonDialogSignOutComponent implements OnInit {
+	
+	constructor(
+        private dialogRef: MatDialogRef<ProfileToolbarButtonDialogSignOutComponent>,
+        @Inject(MAT_DIALOG_DATA) data
+    ) {
+
+    }
+	
+	ngOnInit() {
+		
+	}
+	
+	signOut() {
+        this.dialogRef.close({
+        	signOut: true
+        });
+    }
+
+    cancel() {
+    	
         this.dialogRef.close();
     }
 

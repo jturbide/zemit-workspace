@@ -1,8 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Type, ComponentFactoryResolver, ViewChild, ViewContainerRef } from '@angular/core';
+import { Router, RouterOutlet, NavigationStart } from '@angular/router';
 import { MatDrawer } from '@angular/material/sidenav';
 import { AppSettings } from '@shared/settings';
 import { AppSettingsService } from '@shared/settings.service';
 import { PageService } from '@shared/page.service';
+import { ToolbarService, ToolbarContextObject } from '@shared/toolbar.service';
+import { ToolbarContextComponent, ToolbarContextComponentDirective } from '@components/toolbar/context/context.component';
 
 @Component({
 	selector: 'we-toolbar',
@@ -10,21 +13,61 @@ import { PageService } from '@shared/page.service';
 	styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
-		
+	
 	@Input() menu: MatDrawer;
+	@ViewChild("toolbarTools", { read: ViewContainerRef }) weToolbarContextComponentRef: ViewContainerRef;
+	
 	public settings: AppSettings;
+	public toolbarContextObject: ToolbarContextObject = null;
 
 	constructor(
+		private router: Router,
 		private appSettingsService: AppSettingsService,
-		public pageService: PageService
+		public pageService: PageService,
+		public toolbarService: ToolbarService,
+		private componentFactoryResolver: ComponentFactoryResolver
 	) {
 		
 	}
-
+	
+	public addComp(component: ToolbarContextObject) {
+		
+		if(component && component.tools !== null) {
+		
+			const componentFactory = this.componentFactoryResolver.resolveComponentFactory(component.tools);
+			const viewContainerRef = this.weToolbarContextComponentRef;
+			const componentRef = viewContainerRef.createComponent(componentFactory);
+			
+			this.toolbarContextObject = component;
+		}
+	}
+	
+	public removeComp(component: ToolbarContextObject) {
+		
+		if(component && component.tools !== null) {
+			
+			const componentFactory = this.componentFactoryResolver.resolveComponentFactory(component.tools);
+			const viewContainerRef = this.weToolbarContextComponentRef;
+			const componentRef = viewContainerRef.remove();
+			
+			this.toolbarContextObject = null;
+		}
+	}
+	
 	ngOnInit() {
 		
 		this.appSettingsService.getAll().subscribe(settings => {
 			this.settings = settings;
+		});
+		
+		this.toolbarService.getComponent().subscribe(component => {
+			this.addComp(component);
+		});
+		
+		this.router.events.subscribe(route => {
+			if (route instanceof NavigationStart) {
+				this.removeComp(this.toolbarContextObject);
+			}
 		});
 	}
 

@@ -1,6 +1,6 @@
 @import '~src/variables.scss';
 
-.mat-drawer-content {
+.mat-drawer-content.empty {
     background-color: gray;
     color: $dePrimaryTextColor;
     text-shadow: rgba(0, 0, 0, 0.5) 1px 1px;

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,6 +47,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomePageComponent } from './pages/home/home.component';
 import { NotFoundPageComponent } from './pages/not-found/not-found.component';
 import { ContextStructurePageComponent } from './components/context/structure/context-structure.component';
+import { ContextStructureToolbarComponent } from './components/context/structure/toolbar/toolbar.component';
 import { ContextStylePageComponent } from './components/context/style/context-style.component';
 import { ContextEventsPageComponent } from './components/context/events/context-events.component';
 import { ContextPreviewPageComponent } from './components/context/preview/context-preview.component';
@@ -64,7 +66,7 @@ import { SidebarMediasComponent } from './components/sidebar/medias/sidebar-medi
 import { SidebarDebugComponent } from './components/sidebar/debug/sidebar-debug.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { BgMoveComponent } from './components/bg-move/bg-move.component';
-import { ProfileToolbarButtonComponent, ProfileToolbarButtonDialogSignInComponent } from './components/profile/toolbar-button/toolbar-button.component';
+import { ProfileToolbarButtonComponent, ProfileToolbarButtonDialogSignInComponent, ProfileToolbarButtonDialogSignOutComponent } from './components/profile/toolbar-button/toolbar-button.component';
 // import { ModalComponent } from './components/modal/modal.component';
 import { PageComponent } from './components/page/page.component';
 import { DocsComponent } from './components/docs/docs.component';
@@ -72,6 +74,12 @@ import { ProfileAccountComponent } from './components/profile/account/profile-ac
 import { SidebarDirective } from './components/sidebar/sidebar.directive';
 import { ContextPageComponent } from './components/context/context.component';
 import { DashboardPageComponent } from './pages/dashboard/dashboard.component';
+import { SidebarWorkspacesDialogAddComponent } from './components/sidebar/workspaces/dialog-add/dialog-add.component';
+import { SidebarWorkspacesDialogRemoveComponent } from './components/sidebar/workspaces/dialog-remove/dialog-remove.component';
+import { NotDeletedPipe } from './pipes/not-deleted.pipe';
+import { OrgchartComponent } from './components/orgchart/orgchart.component';
+import { ToolbarContextComponent } from './components/toolbar/context/context.component';
+import { ContextToolbarContextComponent } from './components/context/toolbar-context/toolbar-context.component';
 
 @NgModule({
 	declarations: [
@@ -105,9 +113,17 @@ import { DashboardPageComponent } from './pages/dashboard/dashboard.component';
 		PageComponent,
 		ProfileToolbarButtonComponent,
 		ProfileToolbarButtonDialogSignInComponent,
+		ProfileToolbarButtonDialogSignOutComponent,
 		SidebarDirective,
 		ContextPageComponent,
 		DashboardPageComponent,
+		SidebarWorkspacesDialogAddComponent,
+		SidebarWorkspacesDialogRemoveComponent,
+		NotDeletedPipe,
+		OrgchartComponent,
+		ToolbarContextComponent,
+		ContextToolbarContextComponent,
+		ContextStructureToolbarComponent
 		// ModalComponent
 	],
 	imports: [
@@ -145,13 +161,19 @@ import { DashboardPageComponent } from './pages/dashboard/dashboard.component';
 		MatTableModule,
 		MatSortModule,
 		MatPaginatorModule,
-		FlexLayoutModule
+		FlexLayoutModule,
+		FormsModule
 	],
 	entryComponents: [
 		SidebarWorkspacesComponent,
 		SidebarMediasComponent,
 		SidebarWidgetsComponent,
-		ProfileToolbarButtonDialogSignInComponent
+		ProfileToolbarButtonDialogSignInComponent,
+		ProfileToolbarButtonDialogSignOutComponent,
+		SidebarWorkspacesDialogAddComponent,
+		SidebarWorkspacesDialogRemoveComponent,
+		ContextToolbarContextComponent,
+		ContextStructureToolbarComponent
 	],
 	providers: [
 		AppSettingsService,

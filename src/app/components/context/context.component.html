@@ -1,10 +1,16 @@
 <mat-drawer-container autosize fxFlex>
-    <mat-drawer-content fxLayout="column" fxLayoutAlign="center center" fxFlex class="mat-typography">
-        
-        <we-bg-move></we-bg-move>
-        <div class="empty-workspace">
+    <mat-drawer-content [ngClass]="{ empty: !workspace }" fxLayout="column" fxLayoutAlign="center center" fxFlex class="mat-typography">
+        mat-top
+        <we-bg-move *ngIf="!workspace"></we-bg-move>
+        <div *ngIf="!workspace" class="empty-workspace">
             No workspace loaded
         </div>
+        <div *ngIf="workspace" class="has-workspace" fxFlex fxFlexFill>
+            top
+            <we-orgchart></we-orgchart>
+            bottom
+        </div>
+        mat-bottom
     </mat-drawer-content>
     <mat-drawer #drawer class="sidenav-content" mode="side" position="end">
         <we-sidebar-content fxFlex #sidebarContent [drawer]="drawer"></we-sidebar-content>

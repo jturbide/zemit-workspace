@@ -8,11 +8,15 @@ import { SidebarWorkspacesComponent } from '@components/sidebar/workspaces/sideb
 import { SidebarWidgetsComponent } from '@components/sidebar/widgets/sidebar-widgets.component';
 import { SidebarMediasComponent } from '@components/sidebar/medias/sidebar-medias.component';
 
-export interface SidebarDrawer {
-  title: string,
-  content: SidebarComponent,
-  isDisabled(): boolean,
-  isVisible(): boolean
+export class SidebarDrawer {
+	title: string = null;
+	content: SidebarComponent = null;
+	isDisabled(): boolean {
+		return false;
+	};
+	isVisible(): boolean {
+		return true;
+	};
 }
 
 @Component({
