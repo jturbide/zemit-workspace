@@ -7,7 +7,7 @@ import { ProfileService } from '@shared/profile.service';
 import { User } from '@models/user.model';
 
 @Component({
-	selector: 'we-profile-toolbar-button',
+	selector: 'zm-profile-toolbar-button',
 	templateUrl: './toolbar-button.component.html',
 	styleUrls: ['./toolbar-button.component.scss']
 })
@@ -87,7 +87,7 @@ export class ProfileToolbarButtonComponent implements OnInit {
 }
 
 @Component({
-	selector: 'we-profile-toolbar-button-dialog-sign-in',
+	selector: 'zm-profile-toolbar-button-dialog-sign-in',
 	templateUrl: './dialog-sign-in/dialog.sign-in.html',
 	styleUrls: ['./dialog-sign-in/dialog.sign-in.scss']
 })
@@ -117,7 +117,7 @@ export class ProfileToolbarButtonDialogSignInComponent implements OnInit {
 }
 
 @Component({
-	selector: 'we-profile-toolbar-button-dialog-sign-out',
+	selector: 'zm-profile-toolbar-button-dialog-sign-out',
 	templateUrl: './dialog-sign-out/dialog.sign-out.html',
 	styleUrls: ['./dialog-sign-out/dialog.sign-out.scss']
 })

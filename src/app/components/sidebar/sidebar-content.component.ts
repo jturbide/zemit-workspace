@@ -8,7 +8,7 @@ export interface SidebarComponent {
 }
 
 @Component({
-	selector: 'we-sidebar-content',
+	selector: 'zm-sidebar-content',
 	templateUrl: './sidebar-content.component.html',
 	styleUrls: ['./sidebar-content.component.scss']
 })

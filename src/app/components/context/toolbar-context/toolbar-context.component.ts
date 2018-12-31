@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ToolbarContextComponent } from '@components/toolbar/context/context.component';
 
 @Component({
-	selector: 'we-context-toolbar-context',
+	selector: 'zm-context-toolbar-context',
 	templateUrl: './toolbar-context.component.html',
 	styleUrls: ['./toolbar-context.component.scss']
 })

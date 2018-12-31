@@ -3,7 +3,7 @@ import { PageComponent } from '@components/page/page.component';
 import { PageService } from '@shared/page.service';
 
 @Component({
-	selector: 'we-dashboard',
+	selector: 'zm-dashboard',
 	templateUrl: './dashboard.component.html',
 	styleUrls: ['./dashboard.component.scss']
 })

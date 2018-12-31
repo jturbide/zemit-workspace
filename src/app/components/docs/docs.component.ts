@@ -3,7 +3,7 @@ import { AppSettings } from '@shared/settings';
 import { AppSettingsService } from '@shared/settings.service';
 
 @Component({
-	selector: 'we-docs',
+	selector: 'zm-docs',
 	templateUrl: './docs.component.html',
 	styleUrls: ['./docs.component.scss']
 })

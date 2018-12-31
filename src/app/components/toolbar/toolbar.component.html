@@ -7,7 +7,7 @@
         </button>
         
         <mat-divider vertical *ngIf="toolbarContextObject"></mat-divider>
-        <ng-template #toolbarTools we-toolbar-context-component></ng-template>
+        <ng-template #toolbarTools zm-toolbar-context-component></ng-template>
         
         <mat-divider vertical></mat-divider>
         
@@ -15,11 +15,11 @@
             <span>{{ pageService.getTitle() }}</span>
         </span>
         
-        <we-profile-toolbar-button></we-profile-toolbar-button>
+        <zm-profile-toolbar-button></zm-profile-toolbar-button>
         
         <!--<mat-divider vertical></mat-divider>-->
         
-        <we-docs></we-docs>
-        <we-settings></we-settings>
+        <zm-docs></zm-docs>
+        <zm-settings></zm-settings>
     </mat-toolbar-row>
 </mat-toolbar>

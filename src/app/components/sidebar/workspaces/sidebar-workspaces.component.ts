@@ -8,7 +8,7 @@ import { Workspace } from "@models/workspace.model";
 import { Router } from "@angular/router"
 
 @Component({
-	selector: 'we-sidebar-workspaces',
+	selector: 'zm-sidebar-workspaces',
 	templateUrl: './sidebar-workspaces.component.html',
 	styleUrls: ['./sidebar-workspaces.component.scss']
 })

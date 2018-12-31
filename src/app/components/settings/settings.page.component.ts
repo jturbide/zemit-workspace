@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PageComponent } from '@components/page/page.component';
 
 @Component({
-	selector: 'we-settings-page',
+	selector: 'zm-settings-page',
 	templateUrl: './settings.page.component.html',
 	styleUrls: ['./settings.page.component.scss']
 })

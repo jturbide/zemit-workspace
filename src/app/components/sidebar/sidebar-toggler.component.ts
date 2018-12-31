@@ -20,7 +20,7 @@ export class SidebarDrawer {
 }
 
 @Component({
-	selector: 'we-sidebar-toggler',
+	selector: 'zm-sidebar-toggler',
 	templateUrl: './sidebar-toggler.component.html',
 	styleUrls: ['./sidebar-toggler.component.scss']
 })

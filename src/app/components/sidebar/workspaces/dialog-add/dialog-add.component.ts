@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material";
 
 @Component({
-	selector: 'we-sidebar-workspaces-dialog-add',
+	selector: 'zm-sidebar-workspaces-dialog-add',
 	templateUrl: './dialog-add.component.html',
 	styleUrls: ['./dialog-add.component.scss']
 })

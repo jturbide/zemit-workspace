@@ -3,7 +3,7 @@ import { PageComponent } from '@components/page/page.component';
 import { PageService } from '@shared/page.service';
 
 @Component({
-	selector: 'we-not-found-page',
+	selector: 'zm-not-found-page',
 	templateUrl: './not-found.component.html',
 	styleUrls: ['./not-found.component.scss']
 })

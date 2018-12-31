@@ -3,7 +3,7 @@ import { PageComponent } from '@components/page/page.component';
 import { PageService } from '@shared/page.service';
 
 @Component({
-	selector: 'we-home-page',
+	selector: 'zm-home-page',
 	templateUrl: './home.component.html',
 	styleUrls: ['./home.component.scss'],
 })

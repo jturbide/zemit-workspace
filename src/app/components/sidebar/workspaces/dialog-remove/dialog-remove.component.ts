@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material";
 
 @Component({
-	selector: 'we-sidebar-workspaces-dialog-remove',
+	selector: 'zm-sidebar-workspaces-dialog-remove',
 	templateUrl: './dialog-remove.component.html',
 	styleUrls: ['./dialog-remove.component.scss']
 })

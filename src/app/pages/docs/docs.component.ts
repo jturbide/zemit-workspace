@@ -3,7 +3,7 @@ import { PageComponent } from '@components/page/page.component';
 import { PageService } from '@shared/page.service';
 
 @Component({
-	selector: 'we-docs-page',
+	selector: 'zm-docs-page',
 	templateUrl: './docs.component.html',
 	styleUrls: ['./docs.component.scss']
 })

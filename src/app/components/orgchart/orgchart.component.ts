@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as OrgChart from 'orgchart.js';
 
 @Component({
-	selector: 'we-orgchart',
+	selector: 'zm-orgchart',
 	templateUrl: './orgchart.component.html',
 	styleUrls: ['./orgchart.component.scss']
 })

@@ -8,7 +8,7 @@ import { ToolbarService } from '@shared/toolbar.service';
 import { ContextToolbarContextComponent } from '@components/context/toolbar-context/toolbar-context.component';
 
 @Component({
-	selector: 'we-context',
+	selector: 'zm-context',
 	templateUrl: './context.component.html',
 	styleUrls: ['./context.component.scss']
 })

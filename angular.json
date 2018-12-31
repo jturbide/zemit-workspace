@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "workspaceengine": {
+    "workspace": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "we",
+      "prefix": "zm",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/workspaceengine",
+            "outputPath": "dist/workspace",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "workspaceengine:build"
+            "browserTarget": "workspace:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "workspaceengine:build:production"
+              "browserTarget": "workspace:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "workspaceengine:build"
+            "browserTarget": "workspace:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "workspaceengine-e2e": {
+    "workspace-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "workspaceengine:serve"
+            "devServerTarget": "workspace:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "workspaceengine:serve:production"
+              "devServerTarget": "workspace:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "workspaceengine"
+  "defaultProject": "workspace"
 }
