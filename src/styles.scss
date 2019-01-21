@@ -1,63 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~material-design-icons-iconfont/dist/material-design-icons.css';
-@import "~@angular/material/prebuilt-themes/indigo-pink";
-@import '~orgchart.js/src/orgchart.css';
+@import url(~material-design-icons-iconfont/dist/material-design-icons.css);
+@import url(~@angular/material/prebuilt-themes/indigo-pink.css);
+@import url(~orgchart.js/src/orgchart.css);
+
 @import 'sizing';
 @import 'variables';
 
 html, body {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
 }
 
 * {
-    user-select: none;
+	user-select: none;
 }
 
 .active-route {
-  opacity: 0.5;
-  pointer-events: none;
+	opacity: 0.5;
+	pointer-events: none;
 }
 
 .mat-typography {
-  font-size: 1rem;
-  line-height: 1.5rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
 }
 
 .mat-raised-button.mat-primary {
-  background-color: $matPrimaryBgColor !important;
-  color: $matPrimaryTextColor !important;
+	background-color: $matPrimaryBgColor !important;
+	color: $matPrimaryTextColor !important;
 }
 
 .mat-raised-button.mat-secondary {
-  background-color: $colorSuccessBg;
-  color: $colorSuccessText;
+	background-color: $colorSuccessBg;
+	color: $colorSuccessText;
 }
 
 .mat-button-wrapper > .mat-icon + * {
-  margin-left: 0.5rem;
+	margin-left: 0.5rem;
 }
 
 /**
  * MatDialog
  */
 [mat-dialog-title] {
-  background-color: rgba(0, 0, 0, 0.85);
-  color: white;
-  margin: -25px -24px 25px -25px !important;
-  padding: 10px 24px !important;
+	background-color: rgba(0, 0, 0, 0.85);
+	color: white;
+	margin: -25px -24px 25px -25px !important;
+	padding: 10px 24px !important;
 }
 .mat-dialog-actions {
-  margin: -24px !important;
-  margin-top: 20px !important;
-  padding: 5px 24px !important;
-  background-color: rgba(0, 0, 0, 0.05);
-  border-top: rgba(0, 0, 0, 0.05) solid 1px;
-  box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, 0.25);
-  justify-content: stretch;
+	margin: -24px !important;
+	margin-top: 20px !important;
+	padding: 5px 24px !important;
+	background-color: rgba(0, 0, 0, 0.05);
+	border-top: rgba(0, 0, 0, 0.05) solid 1px;
+	box-shadow: inset 0 10px 20px -10px rgba(0, 0, 0, 0.25);
+	justify-content: stretch;
 }
 .mat-dialog-actions > * {
-  flex: 1;
+	flex: 1;
 }

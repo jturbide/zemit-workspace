@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { AppSettingsService } from '@shared/settings.service';
 import { PageService } from '@shared/page.service';
 
-//Angular Material Components
+// Angular Material Components
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
@@ -46,45 +46,49 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HomePageComponent } from './pages/home/home.component';
 import { NotFoundPageComponent } from './pages/not-found/not-found.component';
-import { ContextStructurePageComponent } from './components/context/structure/context-structure.component';
-import { ContextStructureToolbarComponent } from './components/context/structure/toolbar/toolbar.component';
-import { ContextStylePageComponent } from './components/context/style/context-style.component';
-import { ContextEventsPageComponent } from './components/context/events/context-events.component';
-import { ContextPreviewPageComponent } from './components/context/preview/context-preview.component';
-import { ProfileAccountPageComponent } from './components/profile/account/profile-account.component';
+import { ContextStructurePageComponent } from '@components/context/structure/context-structure.component';
+import { ContextStructureToolbarComponent } from '@components/context/structure/toolbar/toolbar.component';
+import { ContextStylePageComponent } from '@components/context/style/context-style.component';
+import { ContextEventsPageComponent } from '@components/context/events/context-events.component';
+import { ContextPreviewPageComponent } from '@components/context/preview/context-preview.component';
+import { ProfileAccountPageComponent } from '@components/profile/account/profile-account.component';
 import { AboutPageComponent } from './pages/about/about.component';
 import { DocsPageComponent } from './pages/docs/docs.component';
-import { SettingsPageComponent } from './components/settings/settings.page.component';
+import { SettingsPageComponent } from '@components/settings/settings.page.component';
 
-import { ContextTogglerComponent } from './components/context/context-toggler.component';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import { SidebarTogglerComponent } from './components/sidebar/sidebar-toggler.component';
-import { SidebarContentComponent } from './components/sidebar/sidebar-content.component';
-import { SidebarWorkspacesComponent } from './components/sidebar/workspaces/sidebar-workspaces.component';
-import { SidebarWidgetsComponent } from './components/sidebar/widgets/sidebar-widgets.component';
-import { SidebarMediasComponent } from './components/sidebar/medias/sidebar-medias.component';
-import { SidebarDebugComponent } from './components/sidebar/debug/sidebar-debug.component';
-import { SettingsComponent } from './components/settings/settings.component';
-import { BgMoveComponent } from './components/bg-move/bg-move.component';
-import { ProfileToolbarButtonComponent, ProfileToolbarButtonDialogSignInComponent, ProfileToolbarButtonDialogSignOutComponent } from './components/profile/toolbar-button/toolbar-button.component';
-// import { ModalComponent } from './components/modal/modal.component';
-import { PageComponent } from './components/page/page.component';
-import { DocsComponent } from './components/docs/docs.component';
-import { ProfileAccountComponent } from './components/profile/account/profile-account.component';
-import { SidebarDirective } from './components/sidebar/sidebar.directive';
-import { ContextPageComponent } from './components/context/context.component';
+import { ContextTogglerComponent } from '@components/context/context-toggler.component';
+import { ToolbarComponent } from '@components/toolbar/toolbar.component';
+import { SidebarTogglerComponent } from '@components/sidebar/sidebar-toggler.component';
+import { SidebarContentComponent } from '@components/sidebar/sidebar-content.component';
+import { SidebarWorkspacesComponent } from '@components/sidebar/workspaces/sidebar-workspaces.component';
+import { SidebarWidgetsComponent } from '@components/sidebar/widgets/sidebar-widgets.component';
+import { SidebarMediasComponent } from '@components/sidebar/medias/sidebar-medias.component';
+import { SidebarDebugComponent } from '@components/sidebar/debug/sidebar-debug.component';
+import { SettingsComponent } from '@components/settings/settings.component';
+import { BgMoveComponent } from '@components/bg-move/bg-move.component';
+import {
+	ProfileToolbarButtonComponent,
+	ProfileToolbarButtonDialogSignInComponent,
+	ProfileToolbarButtonDialogSignOutComponent
+} from '@components/profile/toolbar-button/toolbar-button.component';
+// import { ModalComponent } from '@components/modal/modal.component';
+import { PageComponent } from '@components/page/page.component';
+import { DocsComponent } from '@components/docs/docs.component';
+import { ProfileAccountComponent } from '@components/profile/account/profile-account.component';
+import { SidebarDirective } from '@components/sidebar/sidebar.directive';
+import { ContextPageComponent } from '@components/context/context.component';
 import { DashboardPageComponent } from './pages/dashboard/dashboard.component';
-import { SidebarWorkspacesDialogAddComponent } from './components/sidebar/workspaces/dialog-add/dialog-add.component';
-import { SidebarWorkspacesDialogRemoveComponent } from './components/sidebar/workspaces/dialog-remove/dialog-remove.component';
+import { SidebarWorkspacesDialogAddComponent } from '@components/sidebar/workspaces/dialog-add/dialog-add.component';
+import { SidebarWorkspacesDialogRemoveComponent } from '@components/sidebar/workspaces/dialog-remove/dialog-remove.component';
 import { NotDeletedPipe } from './pipes/not-deleted.pipe';
-import { OrgchartComponent } from './components/orgchart/orgchart.component';
-import { ToolbarContextComponent } from './components/toolbar/context/context.component';
-import { ContextToolbarContextComponent } from './components/context/toolbar-context/toolbar-context.component';
+import { OrgchartComponent } from '@components/orgchart/orgchart.component';
+import { ToolbarContextComponent } from '@components/toolbar/context/context.component';
+import { ContextToolbarContextComponent } from '@components/context/toolbar-context/toolbar-context.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		
+
 		// Pages
 		HomePageComponent,
 		NotFoundPageComponent,
@@ -96,7 +100,7 @@ import { ContextToolbarContextComponent } from './components/context/toolbar-con
 		SettingsPageComponent,
 		DocsPageComponent,
 		ProfileAccountPageComponent,
-		
+
 		// Components
 		ContextTogglerComponent,
 		ProfileAccountComponent,

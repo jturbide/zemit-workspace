@@ -1,23 +1,23 @@
 @import '~src/variables.scss';
 
 .main-content {
-  text-align: center;
-  padding: 1rem;
+	text-align: center;
+	padding: 1rem;
 }
 
 /deep/ router-outlet + * {
-  min-width: 100%;
-  min-height: 100%;
-  display: flex;
+	min-width: 100%;
+	min-height: 100%;
+	display: flex;
 }
 
 .profile-card-image {
-  background-size: cover;
+	background-size: cover;
 }
 .profile-card {
-  border-radius: 0;
-  box-shadow: none !important;
+	border-radius: 0;
+	box-shadow: none !important;
 }
 /deep/ .profile-card .mat-card-subtitle {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }

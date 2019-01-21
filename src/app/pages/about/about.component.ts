@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PageComponent } from '@components/page/page.component';
 import { PageService } from '@shared/page.service';
 
@@ -12,11 +12,11 @@ export class AboutPageComponent implements PageComponent {
 	constructor(
 		private pageService: PageService
 	) {
-		
+
 	}
 
 	ngOnInit() {
-		
+
 		this.pageService.setTitle('About Workspace Engine');
 	}
 
