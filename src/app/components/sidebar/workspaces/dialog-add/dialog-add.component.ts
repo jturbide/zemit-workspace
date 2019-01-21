@@ -1,5 +1,5 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material";
+import {Component, Inject, OnInit} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 
 @Component({
 	selector: 'zm-sidebar-workspaces-dialog-add',
@@ -12,26 +12,26 @@ export class SidebarWorkspacesDialogAddComponent implements OnInit {
 
 	constructor(
 		private dialogRef: MatDialogRef<SidebarWorkspacesDialogAddComponent>,
-        @Inject(MAT_DIALOG_DATA) data: Object
+		@Inject(MAT_DIALOG_DATA) data: Object
 	) {
-		
+
 		this.data = data;
 	}
 
 	ngOnInit() {
-		
-	}
-	
-	create() {
-        this.dialogRef.close(this.data);
-    }
-    
-    update() {
-    	this.dialogRef.close(this.data);
-    }
 
-    cancel() {
-        this.dialogRef.close();
-    }
+	}
+
+	create() {
+		this.dialogRef.close(this.data);
+	}
+
+	update() {
+		this.dialogRef.close(this.data);
+	}
+
+	cancel() {
+		this.dialogRef.close();
+	}
 
 }

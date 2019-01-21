@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { SidebarComponent } from '@components/sidebar/sidebar-content.component';
+import {Component, OnInit} from '@angular/core';
+import {SidebarComponent} from '@components/sidebar/sidebar-content.component';
 
 @Component({
-  selector: 'zm-sidebar-medias',
-  templateUrl: './sidebar-medias.component.html',
-  styleUrls: ['./sidebar-medias.component.scss']
+	selector: 'zm-sidebar-medias',
+	templateUrl: './sidebar-medias.component.html',
+	styleUrls: ['./sidebar-medias.component.scss']
 })
 export class SidebarMediasComponent implements OnInit, SidebarComponent {
 
-  constructor() { }
+	constructor() {
+	}
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 }

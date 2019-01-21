@@ -1,39 +1,39 @@
 @import '~src/variables.scss';
 
 :host {
-    position: relative;
+	position: relative;
 }
 
 :host,
 /deep/ .orgchart {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    border: 0;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	border: 0;
 }
 
 /deep/ .orgchart {
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 15%, rgba(0, 0, 0, 0) 15%), linear-gradient(rgba(0, 0, 0, 0.05) 15%, rgba(0, 0, 0, 0) 15%);
-    background-size: 10px 10px;
-    background-position: -1px -2px;
-    place-content: center;
-    align-items: center;
-    display: flex;
-    
-    .node .title {
-      padding: 1.5rem;
-      border-radius: 0.25rem;
-      line-height: 0;
-      background-color: $colorSuccessBg;
-      color: $colorSuccessText;
-    }
-    
-    tr.lines .downLine {
-      background-color: rgba(0, 0, 0, 0.25);
-    }
-    
-    tr.lines .leftLine,
-    tr.lines .rightLine {
-      border-color: rgba(0, 0, 0, 0.25);
-    }
+	background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 15%, rgba(0, 0, 0, 0) 15%), linear-gradient(rgba(0, 0, 0, 0.05) 15%, rgba(0, 0, 0, 0) 15%);
+	background-size: 10px 10px;
+	background-position: -1px -2px;
+	place-content: center;
+	align-items: center;
+	display: flex;
+
+	.node .title {
+		padding: 1.5rem;
+		border-radius: 0.25rem;
+		line-height: 0;
+		background-color: $colorSuccessBg;
+		color: $colorSuccessText;
+	}
+
+	tr.lines .downLine {
+		background-color: rgba(0, 0, 0, 0.25);
+	}
+
+	tr.lines .leftLine,
+	tr.lines .rightLine {
+		border-color: rgba(0, 0, 0, 0.25);
+	}
 }

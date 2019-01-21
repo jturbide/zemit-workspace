@@ -1,10 +1,9 @@
-import { Component, OnInit, Input, ViewChild, ComponentFactoryResolver, Type } from '@angular/core';
-import { SidebarDirective } from './sidebar.directive';
-import { MatDrawer } from '@angular/material/sidenav';
-import { SidebarDrawer } from '@components/sidebar/sidebar-toggler.component';
+import {Component, ComponentFactoryResolver, Input, OnInit, ViewChild} from '@angular/core';
+import {SidebarDirective} from './sidebar.directive';
+import {MatDrawer} from '@angular/material/sidenav';
+import {SidebarDrawer} from '@components/sidebar/sidebar-toggler.component';
 
 export interface SidebarComponent {
-	
 }
 
 @Component({
@@ -13,26 +12,27 @@ export interface SidebarComponent {
 	styleUrls: ['./sidebar-content.component.scss']
 })
 export class SidebarContentComponent implements OnInit {
-	
+
 	@Input() drawer: MatDrawer;
-	
+
 	@ViewChild(SidebarDirective) weSidebar: SidebarDirective;
-	
+
 	constructor(
 		private componentFactoryResolver: ComponentFactoryResolver
 	) {
-		
+
 	}
-	
+
 	public addComp(drawer: SidebarDrawer) {
-		
+
 		// @ts-ignore
 		const componentFactory = this.componentFactoryResolver.resolveComponentFactory(drawer.content);
 		const viewContainerRef = this.weSidebar.viewContainerRef;
 		const componentRef = viewContainerRef.createComponent(componentFactory);
 	}
+
 	public removeComp(drawer: SidebarDrawer) {
-		
+
 		// @ts-ignore
 		const componentFactory = this.componentFactoryResolver.resolveComponentFactory(drawer.content);
 		const viewContainerRef = this.weSidebar.viewContainerRef;
@@ -40,6 +40,6 @@ export class SidebarContentComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		
+
 	}
 }

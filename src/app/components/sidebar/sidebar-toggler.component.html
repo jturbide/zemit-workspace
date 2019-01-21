@@ -1,15 +1,17 @@
 <div fxLayout="column" fxFlex>
-    <mat-button-toggle-group vertical name="drawersGroup" aria-label="Drawers">
-        <ng-container *ngFor="let drawer of drawers">
-            <mat-button-toggle *ngIf="drawer.isVisible()" [disabled]="drawer.isDisabled()" class="sidenav-item vertical-rl" (change)="openDrawer(drawer)">
-                {{ drawer.title }}
-            </mat-button-toggle>
-        </ng-container>
-    </mat-button-toggle-group>
-    
-    <span class="sidenav-spacer"></span>
-    
-    <a href="https://www.zemit.com" matTooltip="We're Zemit, visit our website!" matTooltipPosition="left" target="_blank" class="sidenav-item sidenav-icon" type="button" mat-button>
-        <img style="max-width: 1.5rem" src="./assets/logo.png" />
-    </a>
+	<mat-button-toggle-group vertical name="drawersGroup" aria-label="Drawers">
+		<ng-container *ngFor="let drawer of drawers">
+			<mat-button-toggle *ngIf="drawer.isVisible()" [disabled]="drawer.isDisabled()"
+							   class="sidenav-item vertical-rl" (change)="openDrawer(drawer)">
+				{{ drawer.title }}
+			</mat-button-toggle>
+		</ng-container>
+	</mat-button-toggle-group>
+
+	<span class="sidenav-spacer"></span>
+
+	<a href="https://www.zemit.com" matTooltip="We're Zemit, visit our website!" matTooltipPosition="left"
+	   target="_blank" class="sidenav-item sidenav-icon" type="button" mat-button>
+		<img style="max-width: 1.5rem" src="./assets/logo.png"/>
+	</a>
 </div>

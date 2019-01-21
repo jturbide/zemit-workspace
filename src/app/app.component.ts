@@ -1,10 +1,10 @@
-import { Component, ViewChild  } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { AppSettings } from '@shared/settings';
-import { AppSettingsService } from '@shared/settings.service';
-import { MatDrawer } from '@angular/material/sidenav';
-import { ProfileService } from '@shared/profile.service';
-import { User } from '@models/user.model';
+import {Component, ViewChild} from '@angular/core';
+import {NavigationEnd, Router} from '@angular/router';
+import {AppSettings} from '@shared/settings';
+import {AppSettingsService} from '@shared/settings.service';
+import {MatDrawer} from '@angular/material/sidenav';
+import {ProfileService} from '@shared/profile.service';
+import {User} from '@models/user.model';
 
 @Component({
 	selector: 'app-root',

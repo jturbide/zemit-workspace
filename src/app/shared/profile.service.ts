@@ -1,32 +1,30 @@
-import { Injectable } from '@angular/core';
-import { User } from '@models/user.model';
+import {Injectable} from '@angular/core';
+import {User} from '@models/user.model';
 import * as faker from 'faker';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class ProfileService {
-	
+
 	private currentUser: User = null;
 
-	constructor(
-		
-	) {
-		
+	constructor() {
+
 	}
-	
+
 	getCurrentUser() {
-		
-		if(this.currentUser === null) {
+
+		if (this.currentUser === null) {
 			this.currentUser = this.getRandom();
 		}
-		
+
 		return this.currentUser;
 	}
-	
+
 	getRandom() {
-		
-		let user = new User();
+
+		const user = new User();
 		user.avatar = faker.image.avatar();
 		user.email = faker.internet.email();
 		user.firstName = faker.name.firstName();
@@ -34,18 +32,18 @@ export class ProfileService {
 		user.isDeleted = faker.random.boolean();
 		user.createdAt = faker.date.past();
 		user.updatedAt = faker.date.recent();
-		
+
 		return user;
 	}
-	
+
 	getAll() {
-		
-		let users = [];
-		for(let i = 0; i < 10; i++) {
-			let user = this.getRandom();
+
+		const users = [];
+		for (let i = 0; i < 10; i++) {
+			const user = this.getRandom();
 			users.push(user);
 		}
-		
+
 		return users;
 	}
 }

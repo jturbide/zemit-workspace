@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ToolbarContextComponent } from '@components/toolbar/context/context.component';
+import {Component} from '@angular/core';
+import {ToolbarContextComponent} from '@components/toolbar/context/context.component';
 
 @Component({
 	selector: 'zm-context-structure-toolbar',
@@ -8,14 +8,12 @@ import { ToolbarContextComponent } from '@components/toolbar/context/context.com
 })
 export class ContextStructureToolbarComponent implements ToolbarContextComponent {
 
-	constructor(
-		
-	) {
-		
+	constructor() {
+
 	}
 
 	ngOnInit() {
-		
+
 	}
 
 }

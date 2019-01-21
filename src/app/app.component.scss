@@ -14,10 +14,12 @@
 .profile-card-image {
 	background-size: cover;
 }
+
 .profile-card {
 	border-radius: 0;
 	box-shadow: none !important;
 }
+
 /deep/ .profile-card .mat-card-subtitle {
 	margin-bottom: 0;
 }

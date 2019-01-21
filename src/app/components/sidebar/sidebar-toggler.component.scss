@@ -1,20 +1,24 @@
 .sidenav-spacer {
-  flex: 1 1 auto;
+	flex: 1 1 auto;
 }
+
 .sidenav-icon {
-  min-width: 0;
-  padding: 0.5rem 0;
+	min-width: 0;
+	padding: 0.5rem 0;
 }
+
 /deep/ .sidenav-items {
-  border-left: rgba(0, 0, 0, 0.12) solid 1px;
+	border-left: rgba(0, 0, 0, 0.12) solid 1px;
 }
+
 /deep/ .sidenav-items .mat-button-toggle-group {
-  border-radius: 0;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
+	border-radius: 0;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
 }
+
 /deep/ .sidenav-item.vertical-rl .mat-button-toggle-label-content {
-  writing-mode: vertical-rl;
-  padding: 1rem 0;
+	writing-mode: vertical-rl;
+	padding: 1rem 0;
 }

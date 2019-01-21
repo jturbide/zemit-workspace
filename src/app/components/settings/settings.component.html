@@ -1,10 +1,11 @@
 <mat-menu #menuSettings="matMenu">
-    <button mat-menu-item routerLink="/settings" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">
-        <mat-icon>settings</mat-icon>
-        <span>Settings</span>
-    </button>
+	<button mat-menu-item routerLink="/settings" routerLinkActive="active-route"
+			[routerLinkActiveOptions]="{exact: true}">
+		<mat-icon>settings</mat-icon>
+		<span>Settings</span>
+	</button>
 </mat-menu>
 
 <button mat-button [disabled]=true matTooltip="Settings" [matMenuTriggerFor]="menuSettings">
-    <mat-icon>more_vert</mat-icon>
+	<mat-icon>more_vert</mat-icon>
 </button>

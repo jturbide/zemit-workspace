@@ -1,4 +1,4 @@
-import { ModelDefault } from '@models/model.default';
+import {ModelDefault} from '@models/model.default';
 
 export class User extends ModelDefault {
 

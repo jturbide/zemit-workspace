@@ -1,4 +1,4 @@
-import { Directive, ViewContainerRef } from '@angular/core';
+import {Directive, ViewContainerRef} from '@angular/core';
 
 @Directive({
 	selector: '[zm-sidebar]'
@@ -6,9 +6,9 @@ import { Directive, ViewContainerRef } from '@angular/core';
 export class SidebarDirective {
 
 	constructor(
-		public viewContainerRef: ViewContainerRef  
+		public viewContainerRef: ViewContainerRef
 	) {
-		
+
 	}
-	
+
 }

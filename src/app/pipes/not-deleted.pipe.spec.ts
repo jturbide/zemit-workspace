@@ -1,4 +1,4 @@
-import { NotDeletedPipe } from './not-deleted.pipe';
+import {NotDeletedPipe} from './not-deleted.pipe';
 
 describe('NotDeletedPipe', () => {
 	it('create an instance', () => {

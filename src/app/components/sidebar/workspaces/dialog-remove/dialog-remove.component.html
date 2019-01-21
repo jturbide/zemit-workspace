@@ -1,18 +1,18 @@
 <h2 mat-dialog-title>
-    Remove workspace
+	Remove workspace
 </h2>
 
 <mat-dialog-content>
-    
-    Are you sure you want to remove
-    <strong>
-        {{ data.workspace.title }}
-    </strong>
-    ?
- 
+
+	Are you sure you want to remove
+	<strong>
+		{{ data.workspace.title }}
+	</strong>
+	?
+
 </mat-dialog-content>
 
 <mat-dialog-actions>
-    <button mat-raised-button (click)="cancel()">Cancel</button>
-    <button mat-raised-button color="warn" (click)="remove()">Remove</button>
+	<button mat-raised-button (click)="cancel()">Cancel</button>
+	<button mat-raised-button color="warn" (click)="remove()">Remove</button>
 </mat-dialog-actions>

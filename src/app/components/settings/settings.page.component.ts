@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { PageComponent } from '@components/page/page.component';
+import {Component} from '@angular/core';
+import {PageComponent} from '@components/page/page.component';
 
 @Component({
 	selector: 'zm-settings-page',
@@ -8,10 +8,11 @@ import { PageComponent } from '@components/page/page.component';
 })
 export class SettingsPageComponent implements PageComponent {
 
-	constructor() { }
+	constructor() {
+	}
 
 	ngOnInit() {
-		
+
 	}
 
 }

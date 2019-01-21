@@ -1,4 +1,4 @@
-import { Component, OnInit, Directive, ViewContainerRef } from '@angular/core';
+import {Component, Directive, OnInit, ViewContainerRef} from '@angular/core';
 
 @Component({
 	selector: 'zm-toolbar-context',
@@ -7,14 +7,12 @@ import { Component, OnInit, Directive, ViewContainerRef } from '@angular/core';
 })
 export class ToolbarContextComponent implements OnInit {
 
-	constructor(
-		
-	) {
-		
+	constructor() {
+
 	}
 
 	ngOnInit() {
-		
+
 	}
 
 }
@@ -25,9 +23,9 @@ export class ToolbarContextComponent implements OnInit {
 export class ToolbarContextComponentDirective {
 
 	constructor(
-		public viewContainerRef: ViewContainerRef  
+		public viewContainerRef: ViewContainerRef
 	) {
-		
+
 	}
-	
+
 }

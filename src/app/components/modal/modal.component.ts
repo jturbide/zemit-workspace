@@ -12,14 +12,14 @@
 // 		public component: Component,
 // 		public config: MatDialogConfig,
 // 	) {
-		
+
 // 		// this.dialog = MatDialog<component>;
 // 	}
-	
+
 // 	ngOnInit() {
-		
+
 // 	}
-	
+
 // 	open() {
 // 		this.dialogRef = this.dialog.open(ProfileToolbarButtonDialogSignIn, this.config);
 
@@ -28,11 +28,11 @@
 // 			this.animal = result;
 // 		});
 // 	}
-	
+
 // 	close() {
 // 		this.dialogRef.close();
 // 	}
-	
+
 // 	onNoClick(): void {
 // 		this.dialogRef.close();
 // 	}

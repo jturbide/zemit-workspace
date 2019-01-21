@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { PageComponent } from '@components/page/page.component';
-import { PageService } from '@shared/page.service';
-import { ActivatedRoute } from '@angular/router';
-import { Workspace } from '@models/workspace.model';
-import { WorkspaceService } from '@shared/workspace.service';
-import { ToolbarService } from '@shared/toolbar.service';
-import { ContextToolbarContextComponent } from '@components/context/toolbar-context/toolbar-context.component';
+import {Component} from '@angular/core';
+import {PageComponent} from '@components/page/page.component';
+import {PageService} from '@shared/page.service';
+import {ActivatedRoute} from '@angular/router';
+import {Workspace} from '@models/workspace.model';
+import {WorkspaceService} from '@shared/workspace.service';
+import {ToolbarService} from '@shared/toolbar.service';
+import {ContextToolbarContextComponent} from '@components/context/toolbar-context/toolbar-context.component';
 
 @Component({
 	selector: 'zm-context',
@@ -22,18 +22,17 @@ export class ContextPageComponent implements PageComponent {
 		private workspaceService: WorkspaceService,
 		private toolbarService: ToolbarService
 	) {
-		
+
 	}
 
 	ngOnInit() {
-		
-		let workspaceId = parseInt(this.route.snapshot.paramMap.get('workspaceId'));
-		if(workspaceId) {
+
+		const workspaceId = parseInt(this.route.snapshot.paramMap.get('workspaceId'));
+		if (workspaceId) {
 			this.workspace = this.workspaceService.findById(workspaceId);
 			this.pageService.setTitle(this.workspace.title);
 			this.toolbarService.setTools(ContextToolbarContextComponent);
-		}
-		else {
+		} else {
 			this.pageService.setTitle('Context');
 		}
 	}

@@ -1,11 +1,11 @@
 <div fxLayout="column" fxFlex>
-	
+
 	<!-- FILTER WORKSPACES -->
 	<mat-form-field>
 		<mat-icon matPrefix>filter_list</mat-icon>
 		<input type="text" placeholder="Filter workspaces.." aria-label="Number" matInput>
 	</mat-form-field>
-	
+
 	<div class="zm-mb-3" fxFlex style="flex: 1 1 auto; overflow: auto;">
 		<ng-container *ngIf="workspaces.length > 0">
 			<mat-accordion>
@@ -17,33 +17,35 @@
 					</mat-expansion-panel-header>
 					<div>
 						<p>{{ workspace.desc }}</p>
-						
+
 						<mat-action-row>
-							<button color="warn" mat-button matTooltip="Remove workspace" (click)="openWorkspaceRemoveDialog(workspace)">
+							<button color="warn" mat-button matTooltip="Remove workspace"
+									(click)="openWorkspaceRemoveDialog(workspace)">
 								Remove
 							</button>
 							<button mat-button matTooltip="Edit workspace" (click)="openWorkspaceAddDialog(workspace)">
 								Edit
 							</button>
-							
-							<button color="primary" mat-button matTooltip="Load workspace" (click)="loadWorkspace(workspace)">
+
+							<button color="primary" mat-button matTooltip="Load workspace"
+									(click)="loadWorkspace(workspace)">
 								Load
 							</button>
-					    </mat-action-row>
+						</mat-action-row>
 					</div>
 				</mat-expansion-panel>
 			</mat-accordion>
 		</ng-container>
-		
+
 		<div *ngIf="workspaces.length === 0" fxLayoutAlign="center center">
 			No workspace available yet.
 		</div>
 	</div>
-	
+
 	<div class="actions">
 		<button (click)="openWorkspaceAddDialog()" color="secondary" mat-raised-button>
-		    <mat-icon>add_circle_outline</mat-icon>
-		    <span>Add a new workspace</span>
+			<mat-icon>add_circle_outline</mat-icon>
+			<span>Add a new workspace</span>
 		</button>
 	</div>
 </div>

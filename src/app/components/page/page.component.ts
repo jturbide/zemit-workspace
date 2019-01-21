@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
 	selector: 'zm-page',
@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageComponent implements OnInit {
 
-	constructor() { }
+	constructor() {
+	}
 
 	ngOnInit() {
-		
+
 	}
 
 }

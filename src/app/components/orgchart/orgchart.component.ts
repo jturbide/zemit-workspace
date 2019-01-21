@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import * as OrgChart from 'orgchart.js';
 
 @Component({
@@ -8,15 +8,13 @@ import * as OrgChart from 'orgchart.js';
 })
 export class OrgchartComponent implements OnInit {
 
-	constructor(
-		
-	) {
-		
+	constructor() {
+
 	}
 
 	ngOnInit() {
-		
-		let orgchart = new OrgChart.default({
+
+		const orgchart = new OrgChart.default({
 			chartContainer: '#chart-container',
 			data: '#ul-data',
 			draggable: true

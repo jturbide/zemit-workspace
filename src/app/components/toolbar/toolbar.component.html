@@ -1,25 +1,26 @@
 <mat-toolbar fxFlex="none">
-    <mat-toolbar-row>
-        
-        <button mat-button matTooltip="{{ !menu.opened ? 'Open main menu' : 'Close main menu' }}" (click)="menu.toggle()">
-            <mat-icon *ngIf="!menu.opened">menu</mat-icon>
-            <mat-icon *ngIf="menu.opened">close</mat-icon>
-        </button>
-        
-        <mat-divider vertical *ngIf="toolbarContextObject"></mat-divider>
-        <ng-template #toolbarTools zm-toolbar-context-component></ng-template>
-        
-        <mat-divider vertical></mat-divider>
-        
-        <span class="toolbar-spacer">
+	<mat-toolbar-row>
+
+		<button mat-button matTooltip="{{ !menu.opened ? 'Open main menu' : 'Close main menu' }}"
+				(click)="menu.toggle()">
+			<mat-icon *ngIf="!menu.opened">menu</mat-icon>
+			<mat-icon *ngIf="menu.opened">close</mat-icon>
+		</button>
+
+		<mat-divider vertical *ngIf="toolbarContextObject"></mat-divider>
+		<ng-template #toolbarTools zm-toolbar-context-component></ng-template>
+
+		<mat-divider vertical></mat-divider>
+
+		<span class="toolbar-spacer">
             <span>{{ pageService.getTitle() }}</span>
         </span>
-        
-        <zm-profile-toolbar-button></zm-profile-toolbar-button>
-        
-        <!--<mat-divider vertical></mat-divider>-->
-        
-        <zm-docs></zm-docs>
-        <zm-settings></zm-settings>
-    </mat-toolbar-row>
+
+		<zm-profile-toolbar-button></zm-profile-toolbar-button>
+
+		<!--<mat-divider vertical></mat-divider>-->
+
+		<zm-docs></zm-docs>
+		<zm-settings></zm-settings>
+	</mat-toolbar-row>
 </mat-toolbar>

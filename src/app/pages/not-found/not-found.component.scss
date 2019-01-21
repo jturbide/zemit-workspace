@@ -1,14 +1,14 @@
 @import '~src/variables.scss';
 
 :host {
-    background-color: gray;
-    color: white;
-    text-shadow: rgba(0, 0, 0, 0.5) 1px 1px;
-    position: relative;
+	background-color: gray;
+	color: white;
+	text-shadow: rgba(0, 0, 0, 0.5) 1px 1px;
+	position: relative;
 }
 
 .mat-icon {
-    font-size: 3rem;
-    width: 3rem;
-    height: 2rem;
+	font-size: 3rem;
+	width: 3rem;
+	height: 2rem;
 }

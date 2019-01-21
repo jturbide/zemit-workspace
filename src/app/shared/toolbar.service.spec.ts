@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { ToolbarService } from './toolbar.service';
+import {ToolbarService} from './toolbar.service';
 
 describe('ToolbarService', () => {
 	beforeEach(() => TestBed.configureTestingModule({}));

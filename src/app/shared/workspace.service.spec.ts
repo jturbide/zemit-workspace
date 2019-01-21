@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { WorkspaceService } from './workspace.service';
+import {WorkspaceService} from './workspace.service';
 
 describe('WorkspaceService', () => {
 	beforeEach(() => TestBed.configureTestingModule({}));

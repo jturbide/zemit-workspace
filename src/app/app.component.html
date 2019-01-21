@@ -1,75 +1,79 @@
 <div fxLayout="column" fxFlexFill>
-    
-    <div class="main-container" fxLayout="row" fxFlex>
-        <mat-drawer-container autosize fxFlex>
-            <mat-drawer-content fxFlex fxLayout="column">
-                <zm-toolbar [menu]="menu"></zm-toolbar>
-                <main fxFlex fxLayout="column">
-                    <router-outlet></router-outlet>
-                </main>
-            </mat-drawer-content>
-            <mat-drawer #menu class="sidenav-content" mode="over" position="start">
-                
-                <mat-card class="profile-card" *ngIf="settings.isConnected">
-                    <mat-card-header>
-                        <div mat-card-avatar class="profile-card-image" [ngStyle]="{ 'background-image': 'url(' + currentUser.avatar + ')' }"></div>
-                        <mat-card-title>{{ currentUser.getCompleteName() }}</mat-card-title>
-                        <mat-card-subtitle>{{ currentUser.role }}</mat-card-subtitle>
-                    </mat-card-header>
-                </mat-card>
-                    
-                <mat-divider></mat-divider>
-                
-                <mat-nav-list>
-                    
-                    <!--<mat-list-item routerLink="/account" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">-->
-                    <!--    <mat-icon mat-list-icon>person</mat-icon>-->
-                    <!--    <h3 mat-line>My account</h3>-->
-                    <!--</mat-list-item>-->
-                    
-                    <!--<mat-list-item>-->
-                    <!--    <mat-icon mat-list-icon>exit_to_app</mat-icon>-->
-                    <!--    <h3 mat-line>Sign-Out</h3>-->
-                    <!--</mat-list-item>-->
-                    
-                    <h3 mat-subheader>Tools</h3>
-                    
-                    <mat-list-item routerLink="/" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">
-                        <mat-icon mat-list-icon>dashboard</mat-icon>
-                        <h3 mat-line>Dashboard</h3>
-                    </mat-list-item>
-                    
-                    <mat-list-item routerLink="/context" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: false}">
-                        <mat-icon mat-list-icon>developer_mode</mat-icon>
-                        <h3 mat-line>Context</h3>
-                    </mat-list-item>
-                    
-                    <h3 mat-subheader>Info</h3>
-                    
-                    <mat-list-item routerLink="/about" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">
-                        <mat-icon mat-list-icon>info</mat-icon>
-                        <h3 mat-line>About</h3>
-                    </mat-list-item>
-                    
-                    <h3 mat-subheader>Useful links</h3>
-                    
-                    <a mat-list-item href="https://github.com/dannycoulombe/deskengine/wiki" target="_blank">
-            			<!--<mat-icon mat-list-icon>school</mat-icon>-->
-            			<h3 mat-line>Get started</h3>
-            		</a>
-                    
-                    <a mat-list-item href="https://github.com/dannycoulombe/deskengine/issues" target="_blank">
-                        <!--<mat-icon mat-list-icon>bug_report</mat-icon>-->
-                        <h3 mat-line>Report an issue</h3>
-                    </a>
-                    
-                    <a mat-list-item href="https://blog.zemit.com" target="_blank">
-            			<!--<mat-icon mat-list-icon>assignment</mat-icon>-->
-            			<h3 mat-line>Read our blog</h3>
-            		</a>
-                    
-                </mat-nav-list>
-            </mat-drawer>
-        </mat-drawer-container>
-    </div>
+
+	<div class="main-container" fxLayout="row" fxFlex>
+		<mat-drawer-container autosize fxFlex>
+			<mat-drawer-content fxFlex fxLayout="column">
+				<zm-toolbar [menu]="menu"></zm-toolbar>
+				<main fxFlex fxLayout="column">
+					<router-outlet></router-outlet>
+				</main>
+			</mat-drawer-content>
+			<mat-drawer #menu class="sidenav-content" mode="over" position="start">
+
+				<mat-card class="profile-card" *ngIf="settings.isConnected">
+					<mat-card-header>
+						<div mat-card-avatar class="profile-card-image"
+							 [ngStyle]="{ 'background-image': 'url(' + currentUser.avatar + ')' }"></div>
+						<mat-card-title>{{ currentUser.getCompleteName() }}</mat-card-title>
+						<mat-card-subtitle>{{ currentUser.role }}</mat-card-subtitle>
+					</mat-card-header>
+				</mat-card>
+
+				<mat-divider></mat-divider>
+
+				<mat-nav-list>
+
+					<!--<mat-list-item routerLink="/account" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">-->
+					<!--    <mat-icon mat-list-icon>person</mat-icon>-->
+					<!--    <h3 mat-line>My account</h3>-->
+					<!--</mat-list-item>-->
+
+					<!--<mat-list-item>-->
+					<!--    <mat-icon mat-list-icon>exit_to_app</mat-icon>-->
+					<!--    <h3 mat-line>Sign-Out</h3>-->
+					<!--</mat-list-item>-->
+
+					<h3 mat-subheader>Tools</h3>
+
+					<mat-list-item routerLink="/" routerLinkActive="active-route"
+								   [routerLinkActiveOptions]="{exact: true}">
+						<mat-icon mat-list-icon>dashboard</mat-icon>
+						<h3 mat-line>Dashboard</h3>
+					</mat-list-item>
+
+					<mat-list-item routerLink="/context" routerLinkActive="active-route"
+								   [routerLinkActiveOptions]="{exact: false}">
+						<mat-icon mat-list-icon>developer_mode</mat-icon>
+						<h3 mat-line>Context</h3>
+					</mat-list-item>
+
+					<h3 mat-subheader>Info</h3>
+
+					<mat-list-item routerLink="/about" routerLinkActive="active-route"
+								   [routerLinkActiveOptions]="{exact: true}">
+						<mat-icon mat-list-icon>info</mat-icon>
+						<h3 mat-line>About</h3>
+					</mat-list-item>
+
+					<h3 mat-subheader>Useful links</h3>
+
+					<a mat-list-item href="https://github.com/dannycoulombe/deskengine/wiki" target="_blank">
+						<!--<mat-icon mat-list-icon>school</mat-icon>-->
+						<h3 mat-line>Get started</h3>
+					</a>
+
+					<a mat-list-item href="https://github.com/dannycoulombe/deskengine/issues" target="_blank">
+						<!--<mat-icon mat-list-icon>bug_report</mat-icon>-->
+						<h3 mat-line>Report an issue</h3>
+					</a>
+
+					<a mat-list-item href="https://blog.zemit.com" target="_blank">
+						<!--<mat-icon mat-list-icon>assignment</mat-icon>-->
+						<h3 mat-line>Read our blog</h3>
+					</a>
+
+				</mat-nav-list>
+			</mat-drawer>
+		</mat-drawer-container>
+	</div>
 </div>

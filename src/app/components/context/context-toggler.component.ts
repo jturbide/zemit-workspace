@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
 	selector: 'zm-context-toggler',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContextTogglerComponent implements OnInit {
 
-	constructor() { }
+	constructor() {
+	}
 
 	ngOnInit() {
-		
+
 	}
 }

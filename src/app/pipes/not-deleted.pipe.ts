@@ -1,5 +1,5 @@
-import { Pipe, PipeTransform } from '@angular/core';
-import { ModelDefault } from '@models/model.default';
+import {Pipe, PipeTransform} from '@angular/core';
+import {ModelDefault} from '@models/model.default';
 
 @Pipe({
 	name: 'notDeleted'

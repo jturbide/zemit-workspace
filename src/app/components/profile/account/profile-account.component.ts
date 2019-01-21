@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { PageComponent } from '@components/page/page.component';
+import {Component, OnInit} from '@angular/core';
+import {PageComponent} from '@components/page/page.component';
 
 @Component({
 	selector: 'zm-profile-account',
@@ -8,10 +8,11 @@ import { PageComponent } from '@components/page/page.component';
 })
 export class ProfileAccountComponent implements OnInit {
 
-	constructor() { }
+	constructor() {
+	}
 
 	ngOnInit() {
-		
+
 	}
 
 }
@@ -23,10 +24,11 @@ export class ProfileAccountComponent implements OnInit {
 })
 export class ProfileAccountPageComponent implements PageComponent {
 
-	constructor() { }
+	constructor() {
+	}
 
 	ngOnInit() {
-		
+
 	}
 
 }
